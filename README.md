@@ -3,5 +3,5 @@
 БИН-25-3
 
 ## Расписание 
-## ⬇ ⬇ ⬇
-timetables.md
+# ⬇ ⬇ ⬇
+[тыкъ](https://github.com/CHAOS3112/https-github.com-new/blob/main/timetables.md)
