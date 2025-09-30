@@ -1,5 +1,5 @@
 # Всего пар: 
-## "45": "red"
+## 45
 
 ## [Первая неделя](https://github.com/CHAOS3112/https-github.com-new/blob/main/labs/lab2/timetable_1w.md)
 
