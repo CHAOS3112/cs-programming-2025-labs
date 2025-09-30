@@ -1,5 +1,4 @@
-# Всего пар: 
-## 45
+## Всего пар: 45
 
 ## [Первая неделя](https://github.com/CHAOS3112/https-github.com-new/blob/main/labs/lab2/timetable_1w.md)
 
