@@ -1,4 +1,4 @@
-## Всего пар: <font color="#red">45</font> 
+## Всего пар: <font color="#FF0000">45</font> 
 
 ## [Первая неделя](https://github.com/CHAOS3112/https-github.com-new/blob/main/labs/lab2/timetable_1w.md)
 
