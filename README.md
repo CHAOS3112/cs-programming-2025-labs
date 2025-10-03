@@ -1,4 +1,4 @@
-# https-github.com-new
+# cs-programming-2025-labs
 Студенчество, обучение
 
 БИН-25-3
