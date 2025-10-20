@@ -1,0 +1,5 @@
+sum=float(input("Введите сумму покупки: "))
+if sum<1000: print("Ваша скидка: 0%"), print(f'К оплате: {sum}')
+elif sum>=1000 and sum <5000: print("Ваша скидка: 5%"), print(f'К оплате: {sum-(sum*5)/100}')
+elif sum>=5000 and sum <10000: print("Ваша скидка: 10%"), print(f'К оплате: {sum-(sum*10)/100}')
+elif sum>=10000: print("Ваша скидка: 15%"), print(f'К оплате: {sum-(sum*15)/100}')
