@@ -3,6 +3,6 @@ def sort(x):
         return tuple(sorted(x))
     return x
 lis1=[3,2,5,6,1,5]
-lis=[a,f,3,5,h,4]
+lis2=['a','f',3,5,'h',4]
 print(sort(lis1))
 print(sort(lis2))
