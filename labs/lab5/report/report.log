@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.14)  15 NOV 2025 18:16
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.14)  15 NOV 2025 18:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1672,10 +1672,16 @@ xt;"
 (fontspec)             <->"Arial/BI/OT:script=latn;language=dflt;+smcp;mapping=
 tex-text;"
 
- [2
+
+Overfull \hbox (88.14508pt too wide) in paragraph at lines 64--67
+\TU/TimesNewRoman(0)/m/n/12 большее из чисел списка и разделить его на длину сп
+иска. »»»> 62b35d4a3ad8058da0ad97808dfb97566f2dec26 
+ []
+
+[2
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 101--103
+Underfull \hbox (badness 10000) in paragraph at lines 111--113
 
  []
 
@@ -1687,17 +1693,17 @@ No file report.toc.
 [2
 
 ]
-Overfull \hbox (2.78613pt too wide) in paragraph at lines 123--123
+Overfull \hbox (2.78613pt too wide) in paragraph at lines 133--133
 []\TU/Arial(0)/m/n/14 1 [] 
  []
 
 
-Overfull \hbox (3.57178pt too wide) in paragraph at lines 126--126
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 136--136
 []\TU/Arial(0)/m/n/13 1.1 [] 
  []
 
 
-LaTeX Warning: Reference `fig:code_task_1' on page 3 undefined on input line 12
+LaTeX Warning: Reference `fig:code_task_1' on page 3 undefined on input line 13
 8.
 
 
@@ -1712,11 +1718,11 @@ Type X to quit or <RETURN> to proceed,
 or enter new name. (Default extension: py)
 
 Enter file name: 
-c:/Git VSC/https-github.com-new/labs/lab5/report/report.tex:132: Emergency stop
+c:/Git VSC/https-github.com-new/labs/lab5/report/report.tex:142: Emergency stop
 .
 <read *> 
          
-l.132 ...read{1}\selectfont\ttfamily]{code/5.1.py}
+l.142 ...read{1}\selectfont\ttfamily]{code/5.1.py}
                                                   ^^M
 *** (cannot \read from terminal in nonstop modes)
 
