@@ -13,7 +13,7 @@
 \graphicspath{{images/}}
 
 % Автор документа
-\author{В.В. Плотникова}
+\author{А. Е. Филатов}
 
 % Настройка стилей для листингов кода
 \input{listing_styles.tex}
@@ -47,89 +47,72 @@
   Выполнить задания и оформить отчет по стандартам ВВГУ.
 
   \textit{\textbf{Задание 1.}}  
-Дан список из 10 различных целых чисел. Необходимо найти в нем число 3 и заменить на 30.
+  Дан список из 10 различных целых чисел. Необходимо найти в нем число 3 и заменить на 30.
 
   \textit{\textbf{Задание 2.}}  
- Дан список из 5 целых чисел. Необходимо превратить его в список квадратов этих чисел.
+  Дан список из 5 целых чисел. Необходимо превратить его в список квадратов этих чисел.
 
   \textit{\textbf{Задание 3.}}  
-Имеется список различных целых чисел. Программа должна найти наибольшее из чисел списка и разделить его на длину списка.
+  Имеется список различных целых чисел. Программа должна найти наибольшее из чисел списка и разделить его на длину списка.
 
   \textit{\textbf{Задание 4.}}  
-  Число делиться на 6 только в случае соблюдения двух условий:
-  \begin{vvsu_itemize}
-    \item Последняя цифра четная
-    \item Сумма всех цифр делиться на 3
-  \end{vvsu_itemize}
-  Написать программу, которая выведет делиться ли введенное число на 6 или нет.
+  Имеется кортеж из нескольких произвольных элементов. Необходимо этот кортеж отсортировать. Если хотя бы один элемент не является числом, то кортеж остается неизменным.
 
   \textit{\textbf{Задание 5.}}  
-  Написать программу, которая будет проверять пароль на надежность. Пароль считается надежным, если его длина не менее 8 символов и если он содержит:
-
-  \begin{vvsu_itemize}
-    \item Заглавные буквы латиницы
-    \item Строчные буквы латиницы
-    \item Числа
-    \item Специальные знаки
-  \end{vvsu_itemize}
-
-  В случае, если пароль не проходит по одному из условий, необходимо сообщить пользователю каким именно условиям он не удовлетворяет.
-
-  Пример:\\
-    Введите пароль: qwerty\\
-    Пароль ненадежный: отсутствуют заглавные буквы, числа и специальные символы
+  Имеется словарь товаров в магазине. Необходимо найти товар с минимальной и максимальной ценой.
 
   \textit{\textbf{Задание 6.}}  
-  Написать программу, которая определяет, является ли введенный пользователем год високосным. Год считается високосным, если он делится на 4, но не делится на 100, либо если он делится на 400.
-
-  Пример:\\
-    Введите год: 2024\\
-    2024 - високосный год
-
+  Имеется список произвольных элементов. Необходимо на основе этого списка создать словарь, где каждый элемент списка будет и ключом, и значением.
+  
   \textit{\textbf{Задание 7.}}  
-  Написать программу, которая запрашивает у пользователя три числа и выводит на экран наименьшее из них. При решении нельзя использовать встроенные функции min() и max().
+  Имеется словарь перевода английских слов на русский, где ключ английского слово, значение - русского. Необходимо реализовать программу которая получает на ввод русское слово и результатом выдает перевод на английский.
 
-  Пример:\\
-    Введите три числа: 8 3 5\\
-    Наименьшее число: 3
 
   \textit{\textbf{Задание 8.}}  
-  В магазине проводится акция. Акция работает по следующим правилам:
+  Реализовать игру Камень-Ножницы-Бумага-Ящерица-Спок. Программа должна запрашивать у пользователя ввод одного из вариантов. Второй вариант случайно генерирует сама программа и возвращает победителя.
 
-  \begin{vvsu_itemize}
-    \item Сумма < 1000 => скидка - 0\%
-    \item Сумма < 5000 => скидка - 5\%
-    \item Сумма < 10000 => скидка - 10\%
-    \item Сумма > 10000 => скидка - 15\%
-  \end{vvsu_itemize}
+  Правила игры следующие:
+\begin{vvsu_itemize}
+    \item Ножницы режут бумагу
+    \item Бумага покрывает камень
+    \item Камень давит ящерицу
+    \item Ящерица отравляет Спока
+    \item Спок ломает ножницы
+    \item Ножницы обезглавливают ящерицу
+    \item Ящерица съедает бумагу
+    \item Бумага подставляет Спока
+    \item Спок испаряет камень
+    \item Камень разбивает ножницы
+\end{vvsu_itemize}
 
-  Напишите программу, которая запрашивает сумму покупки и выводит размер скидки и итоговую сумму к оплате.
-  
-  Пример:\\
-    Введите сумму покупки: 7500\\
-    Ваша скидка: 10%\\
-    К оплате : 6750.0
-  
   \textit{\textbf{Задание 9.}}  
-  Написать программу, которая определяет время суток по введенному часу (целое число от 0 до 23).
+  Дан список слов - например:
+  \begin{vvsu_itemize}
+    \item `["яблоко", "груша", "банан", "киви", "апельсин", "ананас"]`
+  \end{vvsu_itemize}
+
+  Необходимо создать новый словарь, где:
 
   \begin{vvsu_itemize}
-    \item С 0 до 5 часов - ночь
-    \item С 6 до 11 часов - утро
-    \item С 12 до 17 часов - день
-    \item С 18 до 23 часов - вечер
+    \item Ключом будет первая буква слова
+    \item Значением - список всех слов, начинающихся с этой буквы
   \end{vvsu_itemize}
   
-  Пример:\\
-    Введите час (0–23): 20\\
-    Сейчас вечер
-
-  \textit{\textbf{Задание 10.}}  
-  Написать программу, которая определяет, является ли введенное число простым. Число называется простым, если оно больше 1 и делится только на 1 и само себя. Программа должна корректно обрабатывать некорректный ввод и выводить соответствующие сообщения об ошибках.
+  Пример результата:\\
+    {'я': ['яблоко'], 'г': ['груша'], 'б': ['банан'], 'к': ['киви'], 'а': ['апельсин', 'ананас']}\\
   
-  Пример:\\
-    Введите число: 17\\
-    17 - простое число
+  \textit{\textbf{Задание 10.}}  
+  Дан список кортежей, где каждый кортеж содержит имя студента и его оценки, например:
+  
+  // [("Анна", [5, 4, 5]), ("Иван", [3, 4, 4]), ("Мария", [5, 5, 5])]
+
+  Необходимо:
+
+  \begin{vvsu_itemize}
+    \item Создать словарь, где ключ - имя студента, значение - средняя оценка
+    \item Найти студента с наивысшей средней оценкой
+  \end{vvsu_itemize}
+  
 \end{addition}
 
 
@@ -146,7 +129,7 @@
 
 \begin{vvsu_figure}{Листинг программы для задания 1}{fig:code_task_1}
   \begin{minipage}{.75\textwidth}
-    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{code/task1.py}
+    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{code/5.1.py}
   \end{minipage}
 \end{vvsu_figure}
 
@@ -157,7 +140,7 @@
 
 \begin{vvsu_figure}{Листинг программы для задания 2}{fig:code_task_2}
   \begin{minipage}{.75\textwidth}
-    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{code/task2.py}
+    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{code/5.2.py}
   \end{minipage}
 \end{vvsu_figure}
 
@@ -168,7 +151,7 @@
 
 \begin{vvsu_figure}{Листинг программы для задания 3}{fig:code_task_3}
   \begin{minipage}{.75\textwidth}
-    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{code/task3.py}
+    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{code/5.3.py}
   \end{minipage}
 \end{vvsu_figure}
 
@@ -179,7 +162,7 @@
 
 \begin{vvsu_figure}{Листинг программы для задания 4}{fig:code_task_4}
   \begin{minipage}{.75\textwidth}
-    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{code/task4.py}
+    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{code/5.4.py}
   \end{minipage}
 \end{vvsu_figure}
 
@@ -193,7 +176,7 @@
 
 \begin{vvsu_figure}{Листинг программы для задания 5}{fig:code_task_5}
   \begin{minipage}{.75\textwidth}
-    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{code/task5.py}
+    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{code/5.5.py}
   \end{minipage}
 \end{vvsu_figure}
 
@@ -204,7 +187,7 @@
 
 \begin{vvsu_figure}{Листинг программы для задания 6}{fig:code_task_6}
   \begin{minipage}{.75\textwidth}
-    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{code/task6.py}
+    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{code/5.6.py}
   \end{minipage}
 \end{vvsu_figure}
 
@@ -226,7 +209,7 @@
 
 \begin{vvsu_figure}{Листинг программы для задания 7}{fig:code_task_7}
   \begin{minipage}{.75\textwidth}
-    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{code/task7.py}
+    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{code/5.7.py}
   \end{minipage}
 \end{vvsu_figure}
 
@@ -238,7 +221,7 @@
 
 \begin{vvsu_figure}{Листинг программы для задания 8}{fig:code_task_8}
   \begin{minipage}{.75\textwidth}
-    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{code/task8.py}
+    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{code/5.8.py}
   \end{minipage}
 \end{vvsu_figure}
 
@@ -252,7 +235,7 @@
 
 \begin{vvsu_figure}{Листинг программы для задания 9}{fig:code_task_9}
   \begin{minipage}{.75\textwidth}
-    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{code/task9.py}
+    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{code/5.9.py}
   \end{minipage}
 \end{vvsu_figure}
 
@@ -264,7 +247,7 @@
 
 \begin{vvsu_figure}{Листинг программы для задания 10}{fig:code_task_10}
   \begin{minipage}{.75\textwidth}
-    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{code/task10.py}
+    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{code/5.11.py}
   \end{minipage}
 \end{vvsu_figure}
 

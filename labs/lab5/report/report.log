@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.14)  14 NOV 2025 22:16
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.14)  15 NOV 2025 18:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1674,7 +1674,12 @@ tex-text;"
 
  [2
 
-] [3]
+]
+Underfull \hbox (badness 10000) in paragraph at lines 101--103
+
+ []
+
+[3]
 No file report.toc.
 \tf@toc=\write4
 \openout4 = `report.toc'.
@@ -1682,18 +1687,18 @@ No file report.toc.
 [2
 
 ]
-Overfull \hbox (2.78613pt too wide) in paragraph at lines 140--140
+Overfull \hbox (2.78613pt too wide) in paragraph at lines 123--123
 []\TU/Arial(0)/m/n/14 1 [] 
  []
 
 
-Overfull \hbox (3.57178pt too wide) in paragraph at lines 143--143
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 126--126
 []\TU/Arial(0)/m/n/13 1.1 [] 
  []
 
 
-LaTeX Warning: Reference `fig:code_task_1' on page 3 undefined on input line 14
-5.
+LaTeX Warning: Reference `fig:code_task_1' on page 3 undefined on input line 12
+8.
 
 
 (C:\Users\Machcreator\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1
@@ -1701,26 +1706,26 @@ LaTeX Warning: Reference `fig:code_task_1' on page 3 undefined on input line 14
 File: lstlang1.sty 2025/10/06 1.11 listings language file
 )
 
-! Package Listings Error: File `code/task1(.py)' not found.
+! Package Listings Error: File `code/5.1(.py)' not found.
 
 Type X to quit or <RETURN> to proceed,
 or enter new name. (Default extension: py)
 
 Enter file name: 
-c:/Git VSC/https-github.com-new/labs/lab5/report/report.tex:149: Emergency stop
+c:/Git VSC/https-github.com-new/labs/lab5/report/report.tex:132: Emergency stop
 .
 <read *> 
          
-l.149 ...ad{1}\selectfont\ttfamily]{code/task1.py}
+l.132 ...read{1}\selectfont\ttfamily]{code/5.1.py}
                                                   ^^M
 *** (cannot \read from terminal in nonstop modes)
 
  
 Here is how much of TeX's memory you used:
- 36208 strings out of 402987
- 791102 string characters out of 5447281
- 1808098 words of memory out of 5000000
- 64579 multiletter control sequences out of 15000+600000
+ 36222 strings out of 402987
+ 791296 string characters out of 5447281
+ 1808048 words of memory out of 5000000
+ 64593 multiletter control sequences out of 15000+600000
  631185 words of font info for 96 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  122i,12n,121p,11261b,32665s stack positions out of 10000i,1000n,20000p,200000b,200000s
