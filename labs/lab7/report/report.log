@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.14)  16 JAN 2026 12:51
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.14)  17 JAN 2026 14:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Git VSC/https-github.com-new/labs/lab6/report/report.tex"
-(c:/Git VSC/https-github.com-new/labs/lab6/report/report.tex
+**"c:/Git VSC/https-github.com-new/labs/lab7/report/report.tex"
+(c:/Git VSC/https-github.com-new/labs/lab7/report/report.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-10-24>
 (vvsu.cls
@@ -1470,16 +1470,6 @@ Package csquotes Info: Redefining alias 'default' -> 'russian'.
  (report.aux
 Package babel Info: 'russian' activates 'russian' shorthands.
 (babel)             Reported on input line 10.
-
-
-LaTeX Warning: Label `table:space_terms' multiply defined.
-
-
-LaTeX Warning: Label `table:space_terms' multiply defined.
-
-
-LaTeX Warning: Label `table:space_terms' multiply defined.
-
 )
 \openout1 = `report.aux'.
 
@@ -1700,41 +1690,26 @@ xt;"
 (fontspec)             <->"Arial/BI/OT:script=latn;language=dflt;+smcp;mapping=
 tex-text;"
 
+ [2
 
-Underfull \hbox (badness 10000) in paragraph at lines 73--74
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 112--113
-
- []
-
-[2
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 132--133
-
- []
-
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 180--181
-
- []
-
-[4] (report.toc)
+] [3]
+Missing character: There is no ⚠ in font Times New Roman/OT:script=latn;languag
+e=dflt;mapping=tex-text;!
+Missing character: There is no ️ in font Times New Roman/OT:script=latn;languag
+e=dflt;mapping=tex-text;!
+[4] [5] (report.toc)
 \tf@toc=\write4
 \openout4 = `report.toc'.
 
  [2
 
 ]
-Overfull \hbox (2.78613pt too wide) in paragraph at lines 197--197
+Overfull \hbox (2.78613pt too wide) in paragraph at lines 209--209
 []\TU/Arial(0)/m/n/14 1 [] 
  []
 
 
-Overfull \hbox (3.57178pt too wide) in paragraph at lines 201--201
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 213--213
 []\TU/Arial(0)/m/n/13 1.1 [] 
  []
 
@@ -1742,33 +1717,53 @@ Overfull \hbox (3.57178pt too wide) in paragraph at lines 201--201
 (C:\Users\Machcreator\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1
 .sty
 File: lstlang1.sty 2025/10/06 1.11 listings language file
-) (../code/6.1.py)
-Overfull \hbox (3.57178pt too wide) in paragraph at lines 220--220
+) (../code/7.1.py)
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 229--229
 []\TU/Arial(0)/m/n/13 1.2 [] 
  []
 
-(../code/6.2.py) [3
+(../code/7.2.py) (../code/7.3.py) [3
 
 
 ]
-Overfull \hbox (3.57178pt too wide) in paragraph at lines 239--239
-[]\TU/Arial(0)/m/n/13 1.3 [] 
- []
-
-(../code/6.3.py) [4]
-Overfull \hbox (3.57178pt too wide) in paragraph at lines 260--260
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 258--258
 []\TU/Arial(0)/m/n/13 1.4 [] 
  []
 
-(../code/6.4.py)
-Overfull \hbox (3.57178pt too wide) in paragraph at lines 279--279
+(../code/7.4.py)
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 277--277
 []\TU/Arial(0)/m/n/13 1.5 [] 
  []
 
-(../code/6.5.py) [5]
+(../code/7.5.py) [4]
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 296--296
+[]\TU/Arial(0)/m/n/13 1.6 [] 
+ []
+
+(../code/7.6.py) [5]
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 316--316
+[]\TU/Arial(0)/m/n/13 1.7 [] 
+ []
+
+(../code/7.7.py) [6]
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 338--338
+[]\TU/Arial(0)/m/n/13 1.8 [] 
+ []
+
+(../code/7.8.py)
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 365--365
+[]\TU/Arial(0)/m/n/13 1.9 [] 
+ []
+
+(../code/7.9.py) [7]
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 384--384
+[]\TU/Arial(0)/m/n/13 1.10 [] 
+ []
+
+(../code/7.11.py)
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 297.
+(hyperref)                removing `\\' on input line 403.
 
 
 (C:\Users\Machcreator\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\se-ut
@@ -1778,26 +1773,22 @@ File: se-utf32be.def 2019/11/29 v1.12 stringenc: UTF-32BE
 (C:\Users\Machcreator\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\se-pd
 fdoc.def
 File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
-) [6] (report.aux)
+) [8] (report.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-10-24>
  ***********
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package logreq Info: Writing requests to 'report.run.xml'.
 \openout1 = `report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37341 strings out of 402987
- 809837 string characters out of 5447281
- 2059857 words of memory out of 5000000
- 65672 multiletter control sequences out of 15000+600000
- 631201 words of font info for 98 fonts, out of 8000000 for 9000
+ 37189 strings out of 402987
+ 806590 string characters out of 5447281
+ 2168099 words of memory out of 5000000
+ 65502 multiletter control sequences out of 15000+600000
+ 631225 words of font info for 101 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 122i,12n,121p,11261b,32825s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 122i,12n,121p,11261b,32826s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on report.pdf (9 pages).
+Output written on report.pdf (12 pages).
