@@ -1,0 +1,399 @@
+\documentclass{vvsu}
+
+\vvsuyear{2026}
+
+%%%%%%%%%%%%%%%%%%%
+
+\usepackage{graphicx} % для изображений
+\usepackage{tabularray} % для таблиц
+\usepackage{siunitx} % для обозначений (процент, градус)
+\usepackage{csquotes} % для корректной работы с кавычками
+\usepackage{listings} % для листингов кода
+
+% Список путей, где будут искаться изображения и файлы
+\graphicspath{{images/}}
+
+% Автор документа
+\author{А. Е. Филатов}
+
+% Настройка стилей для листингов кода
+\input{listing_styles.tex}
+
+%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+% Шапка
+\vvsuhead{\linespread{1}\selectfont{}МИНОБРНАУКИ РОССИИ\\
+\vspace{10pt}Федеральное государственное бюджетное образовательное учреждение\\
+высшего образования\\
+\fontsize{13}{13}\selectfont{}<<ВЛАДИВОСТОКСКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ>>\\
+(ФГБОУ ВО <<ВВГУ>>)\\
+\vspace{10pt}\fontsize{12}{12}\selectfont{}ИНСТИТУТ ИНФОРМАЦИОННЫХ ТЕХНОЛОГИЙ И АНАЛИЗА ДАННЫХ\\
+КАФЕДРА ИНФОРМАЦИОННЫХ ТЕХНОЛОГИЙ И СИСТЕМ}
+
+% Название отчета
+\title{Отчет\\по лабораторной работе №7}
+\subtitle{по дисциплине\\<<Информатика и программирование>>}
+
+% Участники работы
+\member{Студент\\ гр. БИН-25-3}{А. Е. Филатов}
+\member{Ассистент\\ преподавателя}{М.В. Водяницкий}
+
+% Вывод титульника
+\maketitle
+
+% Задание
+\begin{addition}{Задание}
+  Выполнить задания и оформить отчет по стандартам ВВГУ.
+
+  \textit{\textbf{Задание 1.}}
+  Имеется список объектов Фонда с указанием уровня угрозы:
+
+ \begin{lstlisting}[basicstyle=\ttfamily\small]
+evaluations = [
+    {"name": "Agent Cole", "score": 78},
+    {"name": "Dr. Weiss", "score": 92},
+    {"name": "Technician Moore", "score": 61},
+    {"name": "Researcher Lin", "score": 88}
+]
+\end{lstlisting}
+  Используя sorted и лямбда-выражение, отсортируйте объекты по возрастанию уровня угрозы
+
+
+  \textit{\textbf{Задание 2.}}  
+  Дан список сотрудников Фонда с количеством проведенных смен и стоимостью одной смены:
+\begin{lstlisting}[basicstyle=\ttfamily\small]
+staff_shifts = [
+    {"name": "Dr. Shaw", "shift_cost": 120, "shifts": 15},
+    {"name": "Agent Torres", "shift_cost": 90, "shifts": 22},
+    {"name": "Researcher Hall", "shift_cost": 150, "shifts": 10}
+]
+\end{lstlisting}
+  Используя map и лямбда-выражение, создайте список общей стоимости работы каждого сотрудника
+  Затем найдите максимальную стоимость с помощью max
+
+  \textit{\textbf{Задание 3.}}  
+  Дан список персонала с уровнем допуска:
+\begin{lstlisting}[basicstyle=\ttfamily\small]
+personnel = [
+    {"name": "Dr. Klein", "clearance": 2},
+    {"name": "Agent Brooks", "clearance": 4},
+    {"name": "Technician Reed", "clearance": 1}
+]
+\end{lstlisting}
+  Используя map и лямбда-выражение, создайте новый список, где каждому сотруднику добавляется категория допуска:
+\begin{vvsu_itemize}
+    \item "Restricted" - уровень 1
+    \item "Confidential" - уровни 2–3
+    \item "Top Secret" - уровень 4 и выше
+\end{vvsu_itemize}
+Результат должен быть списком словарей
+
+  \textit{\textbf{Задание 4.}}  
+  Дан список зон Фонда с указанием времени активности (в часах):
+\begin{lstlisting}[basicstyle=\ttfamily\small]
+zones = [
+    {"zone": "Sector-12", "active_from": 8, "active_to": 18},
+    {"zone": "Deep Storage", "active_from": 0, "active_to": 24},
+    {"zone": "Research Wing", "active_from": 9, "active_to": 17}
+]
+\end{lstlisting}
+  Используя filter и лямбда-выражение, выберите зоны, которые полностью работают в дневной период (с 8 до 18 включительно)
+
+  \textit{\textbf{Задание 5.}}  
+  Фонд анализирует служебные отчеты. Некоторые отчеты содержат внешние ссылки, которые должны быть удалены перед архивированием
+  \begin{lstlisting}[basicstyle=\ttfamily\small]
+  reports = [
+    {"author": "Dr. Moss", "text": "Analysis completed. Reference: http://external-archive.net"},
+    {"author": "Agent Lee", "text": "Incident resolved without escalation."},
+    {"author": "Dr. Patel", "text": "Supplementary data available at https://secure-research.org"},
+    {"author": "Supervisor Kane", "text": "No anomalies detected during inspection."},
+    {"author": "Researcher Bloom", "text": "Extended observations uploaded to http://research-notes.lab"},
+    {"author": "Agent Novak", "text": "Perimeter secured. No external interference observed."},
+    {"author": "Dr. Hargreeve", "text": "Full containment log stored at https://internal-db.scp"},
+    {"author": "Technician Moore", "text": "Routine maintenance completed successfully."},
+    {"author": "Dr. Alvarez", "text": "Cross-reference materials: http://crosslink.foundation"},
+    {"author": "Security Officer Tan", "text": "Shift completed without incidents."},
+    {"author": "Analyst Wright", "text": "Statistical model published at https://analysis-hub.org"},
+    {"author": "Dr. Kowalski", "text": "Behavioral deviations documented internally."},
+    {"author": "Agent Fischer", "text": "Additional footage archived: http://video-storage.sec"},
+    {"author": "Senior Researcher Hall", "text": "All test results verified and approved."},
+    {"author": "Operations Lead Grant", "text": "Emergency protocol draft shared via https://ops-share.scp"}
+]
+\end{lstlisting}
+Используя filter и лямбда-выражение:
+\begin{vvsu_list}
+  \item Отберите отчеты, содержащие ссылки (http или https)
+  \item Преобразуйте их так, чтобы вместо ссылки отображалось [ДАННЫЕ УДАЛЕНЫ]
+\end{vvsu_list}
+
+  \textit{\textbf{Задание 6.}}  
+  Преобразуйте их так, чтобы вместо ссылки отображалось [ДАННЫЕ УДАЛЕНЫ]
+\begin{lstlisting}[basicstyle=\ttfamily\small]
+scp_objects = [
+    {"scp": "SCP-096", "class": "Euclid"},
+    {"scp": "SCP-173", "class": "Euclid"},
+    {"scp": "SCP-055", "class": "Keter"},
+    {"scp": "SCP-999", "class": "Safe"},
+    {"scp": "SCP-3001", "class": "Keter"}
+]
+\end{lstlisting}
+  Используя filter и лямбда-выражение, сформируйте список SCP-объектов, которые требуют усиленных мер содержания
+К объектам с усиленными мерами относятся все SCP, класс которых не равен "Safe"
+
+  Результат должен быть списком словарей исходного формата
+
+  \textit{\textbf{Задание 7.}}  
+  Дан список инцидентов с количеством задействованного персонала:
+\begin{lstlisting}[basicstyle=\ttfamily\small]
+incidents = [
+    {"id": 101, "staff": 4},
+    {"id": 102, "staff": 12},
+    {"id": 103, "staff": 7},
+    {"id": 104, "staff": 20}
+]
+\end{lstlisting}
+Используя sorted и лямбда-выражение:
+\begin{vvsu_list}
+  \item Отсортируйте инциденты по количеству персонала
+  \item Оставьте только три наиболее ресурсоемких инцидента
+\end{vvsu_list}
+
+  \textit{\textbf{Задание 8.}}  
+  Дан список протоколов безопасности и их уровней критичности:
+\begin{lstlisting}[basicstyle=\ttfamily\small]
+protocols = [
+    ("Lockdown", 5),
+    ("Evacuation", 4),
+    ("Data Wipe", 3),
+    ("Routine Scan", 1)
+]
+\end{lstlisting}
+
+Используя map и лямбда-выражение, создайте новый список строк вида:
+\begin{lstlisting}[basicstyle=\ttfamily\small]
+"Protocol Lockdown - Criticality 5"
+\end{lstlisting}
+
+
+  \textit{\textbf{Задание 9.}}  
+Имеется список смен охраны с указанием длительности (в часах):
+ \begin{lstlisting}[basicstyle=\ttfamily\small]
+shifts = [6, 12, 8, 24, 10, 4]
+\end{lstlisting}
+Используя filter и лямбда-выражение, выберите только те смены, которые:
+  \begin{vvsu_list}
+    \item длятся не менее 8 часов
+    \item не превышают 12 часов
+\end{vvsu_list}
+
+  \textit{\textbf{Задание 10.}}  
+  Дан список сотрудников с результатами психологической оценки (от 0 до 100):
+ \begin{lstlisting}[basicstyle=\ttfamily\small]
+evaluations = [
+    {"name": "Agent Cole", "score": 78},
+    {"name": "Dr. Weiss", "score": 92},
+    {"name": "Technician Moore", "score": 61},
+    {"name": "Researcher Lin", "score": 88}
+]
+\end{lstlisting}
+Используя max и лямбда-выражение, определите сотрудника с наивысшей оценкой
+
+Результатом должно быть имя сотрудника и его балл
+\end{addition}
+
+% Содержание
+\toc
+
+% Глава - Выполнение работы
+\section{Выполнение работы}
+\label{sec:execution}
+
+% Подглава - Задание 1
+\subsection{Задание 1}
+  Требуется из заданного кортежа отсортировать уовни угрозс поощью лямбды функции.
+На рисунке \ref{fig:../code/7.1.py} представлен код программы.
+
+\begin{vvsu_figure}{Листинг программы для задания 1}{fig:../code/7.1.py}
+  \begin{minipage}{.75\textwidth}
+    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{../code/7.1.py}
+  \end{minipage}
+\end{vvsu_figure}
+
+\begin{vvsu_list}
+  \item Создает список под названием objects, содержащий кортежи
+  \item Сортирует список objects по второму элементу каждого кортежа (уровню угрозы)
+  \item Начинает цикл по отсортированному списку, где i - текущий кортеж
+  \item Выводит форматированную строку с названием и уровнем угрозы
+\end{vvsu_list}
+
+% Подглава - Задание 2
+\subsection{Задание 2}
+  Дан список сотрудников Фонда проведенными смен и стоимостью одной смены, требуется отсортировать используя map и лямбда-выражение список общей стоимости работы каждого сотрудника и максимальный.
+На рисунке \ref{fig:../code/7.2.py} представлен код программы.
+
+\begin{vvsu_figure}{Листинг программы для задания 2}{fig:../code/7.2.py}
+  \begin{minipage}{.75\textwidth}
+    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{../code/7.2.py}
+  \end{minipage}
+\end{vvsu_figure}
+
+\begin{vvsu_list}
+  \item Создает список словарей с информацией о сотрудниках
+  \item Вычисляет общую стоимость для каждого сотрудника
+  \item Находит максимальное значение из списка общих стоимостей
+  \item Выводит список общих стоимостей
+  \item Выводит максимальную стоимость
+\end{vvsu_list} 
+
+% Подглава - Задание 3
+\subsection{Задание 3}
+  Дан список персонала с уровнем допуска, с помощью map и лямбда-выражение, требуется создать новый список, где каждому сотруднику добавляется категория допуска. После выводим в консоль результат.
+На рисунке \ref{fig:../code/7.3.py} представлен код программы.
+
+\begin{vvsu_figure}{Листинг программы для задания 3}{fig:../code/7.3.py}
+  \begin{minipage}{.75\textwidth}
+    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{../code/7.3.py}
+  \end{minipage}
+\end{vvsu_figure}
+
+\begin{vvsu_list}
+  \item Создается список personnel, содержащий три словаря. Каждый словарь хранит имя сотрудника name и уровень допуска clearance;
+  \item map применяет лямбда-функцию к каждому элементу списка personnel;
+  \item Добавляет новый ключ "category" с вычисляемым значением на основе clearance;
+  \item Выводим итоговый список result.
+\end{vvsu_list}
+
+% Подглава - Задание 4
+\subsection{Задание 4}
+  Дан список зон Фонда с указанием времени активности (в часах), требуется выбрать зоны, которые полностью работают в дневной период (с 8 до 18 включительно).
+На рисунке \ref{fig:../code/7.4.py} представлен код решения.
+
+\begin{vvsu_figure}{Листинг программы для задания 4}{fig:../code/7.4.py}
+  \begin{minipage}{.75\textwidth}
+    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{../code/7.4.py}
+  \end{minipage}
+\end{vvsu_figure}
+
+\begin{vvsu_list}
+  \item спиок зон Фонда с указанием времени активности (в часах);
+  \item используется filter с лямбда-функцией для отбора зон, которые активны с 8 до 18 часов включительно;
+  \item преобразование результата filter в список;
+  \item вывод отобранных зон.
+\end{vvsu_list}
+
+% Подглава - Задание 5
+\subsection{Задание 5}
+  Используя filter и лямбда-выражение, треуется анализировать служебные отчеты, отберя отчеты содержащие ссылки (http или https) и преобразовать их так чтобы вместо ссылки отображалось [ДАННЫЕ УДАЛЕНЫ].
+На рисунке \ref{fig:../code/7.5.py} представлен код программы.
+
+\begin{vvsu_figure}{Листинг программы для задания 5}{fig:../code/7.5.py}
+  \begin{minipage}{.75\textwidth}
+    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{../code/7.5.py}
+  \end{minipage}
+\end{vvsu_figure}
+
+\begin{vvsu_list}
+  \item Создается список reports, содержащий 15 словарей. Каждый словарь представляет отчёт с полями author (автор) и text (текст отчёта). Некоторые тексты содержат ссылки (начинающиеся с http или https).;
+  \item Импортируется модуль re для работы с регулярными выражениями.;
+  \item находит ключ с максимальным значением в словаре products и ложим в переменную max1;
+  \item filter() (строка 21) оставляет только те отчёты, в тексте которых есть подстрока http, а map к отфильрованным отчетам и преобразуется в список filtered reports;
+  \item Цикл for проходит по каждому отчёту в filtered reports и выводит автора и изменённый текст отчёта с удалёнными ссылками.
+\end{vvsu_list}
+
+% Подглава - Задание 6
+\subsection{Задание 6}
+  Дан список SCP-объектов с указанием их класса содержания, требуется сформировать список объяектов, которые требуют усиленных мер содержания.
+На рисунке \ref{fig:../code/7.6.py} представлен код программы.
+
+\begin{vvsu_figure}{Листинг программы для задания 6}{fig:../code/7.6.py}
+  \begin{minipage}{.75\textwidth}
+    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{../code/7.6.py}
+  \end{minipage}
+\end{vvsu_figure}
+
+\begin{vvsu_list}
+  \item Создается список scp objects, содержащий пять словарей. Каждый словарь описывает объект SCP с полями scp (идентификатор SCP) и class (класс объекта: "Euclid", "Keter" или "Safe");
+  \item filter() применяет лямбда-функцию к каждому элементу списка scp objects;
+  \item Лямбда функция проверяет условие;
+  \item filter() возвращает только те объекты SCP, класс которых не является "Safe" (т.е. объекты, требующие усиленных мер сдерживания);
+  \item Результат преобразуется в список enhanced containment;
+  \item Выводит элементы списка enhanced containment с использованием оператора *.
+\end{vvsu_list}
+
+% Подглава - Задание 7
+\subsection{Задание 7}
+    Дан список инцидентов с количеством задействованного персонала, используя sorted и лямбда-выражение требуется отсортировать инциденты по кол-ву персоналу и оставить только 3 самых энегоёмкие.
+  На рисунке \ref{fig:../code/7.7.py} представлен код программы.
+
+\begin{vvsu_figure}{Листинг программы для задания 7}{fig:../code/7.7.py}
+  \begin{minipage}{.75\textwidth}
+    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{../code/7.7.py}
+  \end{minipage}
+\end{vvsu_figure}
+
+\begin{vvsu_list}
+  \item Создаётся список incidents, содержащий четыре словаря. Каждый словарь описывает инцидент с полями id (идентификатор инцидента) и staff (количество персонала, задействованного в инциденте);
+  \item sorted() сортирует список incidents по указанному критерию;
+  \item Параметр key=lambda x: x["staff"] указывает, что сортировка выполняется по значению ключа "staff" (количество персонала).;
+  \item Параметр reverse=True сортировку по убыванию (от большего к меньшему);
+  \item [:3] — оператор среза, который берёт первые три элемента из отсортированного списка (три инцидента с наибольшим количеством персонала);
+  \item Результат присваивается переменной top;
+  \item Выводит список top.
+\end{vvsu_list}
+
+% Подглава - Задание 8
+\subsection{Задание 8}
+  Дан список протоколов безопасности и их уровней критичности, Используя map и лямбда-выражение, создайте новый список строк вида: "Protocol Lockdown - Criticality 5".
+На рисунке \ref{fig:../code/7.8.py} представлен код программы.
+ы
+\begin{vvsu_figure}{Листинг программы для задания 8}{fig:../code/7.8.py}
+  \begin{minipage}{.75\textwidth}
+    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{../code/7.8.py}
+  \end{minipage}
+\end{vvsu_figure}
+
+\begin{vvsu_list}
+  \item Создаётся список protocols;
+  \item map() применяет лямбда-функцию к каждому элементу списка protocols;
+  \item Лямбда-функция, принимает кортеж protocol и возвращает форматированную строку с названием протокола и его критичностью;
+  \item Выводит новый список protocols, содержащий отформатированные строки.
+\end{vvsu_list}
+
+
+% Подглава - Задание 9
+\subsection{Задание 9}
+  Имеется список смен охраны с указанием длительности (в часах), требуется Используя filter и лямбда-выражение, выберите только те смены, которые:длятся не менее 8 часов, не превышают 12 часов.
+На рисунке \ref{fig:../code/7.9.py} представлен код программы.
+
+\begin{vvsu_figure}{Листинг программы для задания 9}{fig:../code/7.9.py}
+  \begin{minipage}{.75\textwidth}
+    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{../code/7.9.py}
+  \end{minipage}
+\end{vvsu_figure}
+
+\begin{vvsu_list}
+  \item Имеется список смен охраны с указанием длительности (в часах);
+  \item filter() применяет лямбда-функцию к каждому элементу списка shifts, лямбда-функция проверяет условие: 8 <= x <= 12 (смена длится от 8 до 12 часов включительно), filter() возвращает только те значения из списка, которые удовлетворяют условию;
+  \item Выводит новый список shifts, содержащий отфильтрованные смены.
+\end{vvsu_list}
+
+% Подглава - Задание 10
+\subsection{Задание 10}
+  Дан список сотрудников с результатами психологической оценки (от 0 до 100), требуется используя max и лямбда-выражение, определите сотрудника с наивысшей оценкой результатом должно быть имя сотрудника и его балл.
+На рисунке \ref{fig:../code/7.11.py} представлен код программы.
+
+\begin{vvsu_figure}{Листинг программы для задания 10}{fig:../code/7.11.py}
+  \begin{minipage}{.75\textwidth}
+    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{../code/7.11.py}
+  \end{minipage}
+\end{vvsu_figure}
+
+\begin{vvsu_list}
+  \item Дан список сотрудников с результатами психологической оценки (от 0 до 100);
+  \item Функция max() находит максимальный элемент в списке evaluations, параметр key=lambda x: x["score"] указывает, что сравнение элементов должно выполняться по значению ключа "score" (баллу), max() возвращает целый словарь (элемент списка), у которого значение score является наибольшим, результат присваивается переменной top;
+  \item Выводит информацию о сотруднике с наивысшим баллом, используя f-строку.
+\end{vvsu_list}
+
+\end{document}
