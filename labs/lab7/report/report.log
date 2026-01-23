@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.14)  23 JAN 2026 11:23
+=======
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.14)  17 JAN 2026 14:40
+>>>>>>> 8f56f06d11c95807f076f103b3aa6c756ccdd28b
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1692,6 +1696,7 @@ tex-text;"
 
  [2
 
+<<<<<<< HEAD
 ] [3] [4] [5] (report.toc)
 \tf@toc=\write4
 \openout4 = `report.toc'.
@@ -1701,11 +1706,30 @@ tex-text;"
 
 ]
 Overfull \hbox (2.78613pt too wide) in paragraph at lines 210--210
+=======
+] [3]
+Missing character: There is no ⚠ in font Times New Roman/OT:script=latn;languag
+e=dflt;mapping=tex-text;!
+Missing character: There is no ️ in font Times New Roman/OT:script=latn;languag
+e=dflt;mapping=tex-text;!
+[4] [5] (report.toc)
+\tf@toc=\write4
+\openout4 = `report.toc'.
+
+ [2
+
+]
+Overfull \hbox (2.78613pt too wide) in paragraph at lines 209--209
+>>>>>>> 8f56f06d11c95807f076f103b3aa6c756ccdd28b
 []\TU/Arial(0)/m/n/14 1 [] 
  []
 
 
+<<<<<<< HEAD
 Overfull \hbox (3.57178pt too wide) in paragraph at lines 214--214
+=======
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 213--213
+>>>>>>> 8f56f06d11c95807f076f103b3aa6c756ccdd28b
 []\TU/Arial(0)/m/n/13 1.1 [] 
  []
 
@@ -1714,6 +1738,7 @@ Overfull \hbox (3.57178pt too wide) in paragraph at lines 214--214
 .sty
 File: lstlang1.sty 2025/10/06 1.11 listings language file
 ) (../code/7.1.py)
+<<<<<<< HEAD
 Overfull \hbox (3.57178pt too wide) in paragraph at lines 232--232
 []\TU/Arial(0)/m/n/13 1.2 [] 
  []
@@ -1743,28 +1768,70 @@ Overfull \hbox (3.57178pt too wide) in paragraph at lines 306--306
 
 (../code/7.6.py)
 Overfull \hbox (3.57178pt too wide) in paragraph at lines 326--326
+=======
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 229--229
+[]\TU/Arial(0)/m/n/13 1.2 [] 
+ []
+
+(../code/7.2.py) (../code/7.3.py) [3
+
+
+]
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 258--258
+[]\TU/Arial(0)/m/n/13 1.4 [] 
+ []
+
+(../code/7.4.py)
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 277--277
+[]\TU/Arial(0)/m/n/13 1.5 [] 
+ []
+
+(../code/7.5.py) [4]
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 296--296
+[]\TU/Arial(0)/m/n/13 1.6 [] 
+ []
+
+(../code/7.6.py) [5]
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 316--316
+>>>>>>> 8f56f06d11c95807f076f103b3aa6c756ccdd28b
 []\TU/Arial(0)/m/n/13 1.7 [] 
  []
 
 (../code/7.7.py) [6]
+<<<<<<< HEAD
 Overfull \hbox (3.57178pt too wide) in paragraph at lines 347--347
+=======
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 338--338
+>>>>>>> 8f56f06d11c95807f076f103b3aa6c756ccdd28b
 []\TU/Arial(0)/m/n/13 1.8 [] 
  []
 
 (../code/7.8.py)
+<<<<<<< HEAD
 Overfull \hbox (3.57178pt too wide) in paragraph at lines 366--366
+=======
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 365--365
+>>>>>>> 8f56f06d11c95807f076f103b3aa6c756ccdd28b
 []\TU/Arial(0)/m/n/13 1.9 [] 
  []
 
 (../code/7.9.py) [7]
+<<<<<<< HEAD
 Overfull \hbox (4.80176pt too wide) in paragraph at lines 383--383
+=======
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 384--384
+>>>>>>> 8f56f06d11c95807f076f103b3aa6c756ccdd28b
 []\TU/Arial(0)/m/n/13 1.10 [] 
  []
 
 (../code/7.11.py)
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+<<<<<<< HEAD
 (hyperref)                removing `\\' on input line 399.
+=======
+(hyperref)                removing `\\' on input line 403.
+>>>>>>> 8f56f06d11c95807f076f103b3aa6c756ccdd28b
 
 
 (C:\Users\Machcreator\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\se-ut
@@ -1784,10 +1851,17 @@ Package logreq Info: Writing requests to 'report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
  37198 strings out of 402987
  806725 string characters out of 5447281
  2129099 words of memory out of 5000000
  65511 multiletter control sequences out of 15000+600000
+=======
+ 37189 strings out of 402987
+ 806590 string characters out of 5447281
+ 2168099 words of memory out of 5000000
+ 65502 multiletter control sequences out of 15000+600000
+>>>>>>> 8f56f06d11c95807f076f103b3aa6c756ccdd28b
  631225 words of font info for 101 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  122i,12n,121p,11261b,32826s stack positions out of 10000i,1000n,20000p,200000b,200000s
