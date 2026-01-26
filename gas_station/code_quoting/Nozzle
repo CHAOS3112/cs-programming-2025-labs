@@ -1,0 +1,10 @@
+class Nozzle:
+    def __init__(self, fuel_type: str, tank: Tank):
+        self.fuel_type = fuel_type
+        self.tank = tank
+
+    def is_available(self) -> bool:
+        return self.tank.enabled
+
+    def get_tank_info(self) -> str:
+        return f"{self.fuel_type} №{self.tank.tank_id}"

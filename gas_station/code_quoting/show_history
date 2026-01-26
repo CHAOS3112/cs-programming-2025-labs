@@ -1,0 +1,6 @@
+def show_history(self):
+    if not self.operations:
+        print("История пуста.")
+    else:
+        for op in reversed(self.operations[-20:]):  # последние 20
+            print(op)

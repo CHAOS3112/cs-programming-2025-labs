@@ -1,0 +1,8 @@
+def log_operation(self, op_type: str, details: str):
+    op = Operation(op_type, details)
+    self.operations.append(op)
+    if len(self.operations) > 100:  # ограничим историю
+        self.operations.pop(0)
+
+def get_disabled_tanks(self) -> List[Tank]:
+    return [t for t in self.tanks if not t.enabled]

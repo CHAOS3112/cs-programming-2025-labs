@@ -1,0 +1,13 @@
+def run(self):
+    self.load_from_files()
+    while True:
+        os.system('cls' if os.name == 'nt' else 'clear')
+        # печать заголовка и меню
+        choice = input("> ").strip()
+        if choice == "1":
+            self.serve_customer()
+        ...
+        elif choice == "0":
+            self.save_to_files()
+            print("Данные сохранены. До свидания!")
+            break

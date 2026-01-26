@@ -1,0 +1,41 @@
+class Tank:
+    def __init__(self, fuel_type: str, tank_id: int, max_volume: int, min_level: int = 2000):
+        self.fuel_type = fuel_type
+        self.tank_id = tank_id
+        self.max_volume = max_volume
+        self.current_volume = max_volume  # начинаем с полных цистерн
+        self.min_level = min_level
+        self.enabled = True
+
+    def is_low(self) -> bool:
+        return self.current_volume < self.min_level
+
+    def disable_if_low(self):
+        if self.is_low():
+            self.enabled = False
+
+    def can_supply(self, liters: int) -> bool:
+        return self.enabled and self.current_volume >= liters
+
+    def withdraw(self, liters: int):
+        if self.can_supply(liters):
+            self.current_volume -= liters
+            self.disable_if_low()
+        else:
+            raise ValueError("Недостаточно топлива или цистерна отключена")
+
+    def refill(self, liters: int):
+        if self.current_volume + liters > self.max_volume:
+            raise ValueError("Превышение максимального объема")
+        self.current_volume += liters
+
+    def to_dict(self):
+        return {
+            "fuel_type": self.fuel_type,
+            "tank_id": self.tank_id,
+            "max_volume": self.max_volume,
+            "current_volume": self.current_volume,
+            "min_level": self.min_level,
+            "enabled": self.enabled
+        }
+...

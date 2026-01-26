@@ -1,0 +1,8 @@
+def show_warning(self):
+    disabled = self.get_disabled_tanks()
+    if disabled:
+        print("ВНИМАНИЕ!")
+        print("Обнаружены отключённые цистерны:")
+        for t in disabled:
+            reason = "низкий уровень топлива" if t.is_low() else "вручную"
+            print(f" - {t.fuel_type} №{t.tank_id} ({reason})")

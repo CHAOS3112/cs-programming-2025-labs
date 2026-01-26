@@ -1,0 +1,37 @@
+def _init_default_setup(self):
+    # Создаем цистерны
+    self.tanks = [
+        Tank(FuelType.AI92, 1, 20000),
+        Tank(FuelType.AI95, 1, 20000),
+        Tank(FuelType.AI95, 2, 20000),
+        Tank(FuelType.AI98, 1, 15000),
+        Tank(FuelType.DT, 1, 25000)
+    ]
+
+    # Связываем колонки с цистернами
+    tank_map = {(t.fuel_type, t.tank_id): t for t in self.tanks}
+
+    # Схема подключения
+    pump_config = {
+        1: [FuelType.AI92, FuelType.AI95],
+        2: [FuelType.AI92, FuelType.AI95],
+        3: [FuelType.AI92, FuelType.AI95, FuelType.AI98, FuelType.DT],
+        4: [FuelType.AI92, FuelType.AI95, FuelType.DT],
+        5: [FuelType.AI92, FuelType.AI95, FuelType.DT],
+        6: [FuelType.AI92, FuelType.AI95, FuelType.AI98, FuelType.DT],
+        7: [FuelType.AI95, FuelType.DT],
+        8: [FuelType.AI95, FuelType.DT]
+    }
+
+    # Назначаем цистерны
+    for pump_id, fuels in pump_config.items():
+        nozzles = []
+        for fuel in fuels:
+            if fuel == FuelType.AI95:
+                # Колонки 1-4 → цистерна 1, 5-8 → цистерна 2
+                tank_id = 1 if pump_id <= 4 else 2
+            else:
+                tank_id = 1
+            tank = tank_map[(fuel, tank_id)]
+            nozzles.append(Nozzle(fuel, tank))
+        self.pumps.append(Pump(pump_id, nozzles))

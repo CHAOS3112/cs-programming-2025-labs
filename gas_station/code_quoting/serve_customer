@@ -1,0 +1,26 @@
+def serve_customer(self):
+    if self.emergency_mode:
+        print("АЗС заблокирована...")
+        return
+
+    available_pumps = [p for p in self.pumps if p.get_available_fuels()]
+    # показывает список колонок, выбирается колонка
+    # выбирается топливо, вводится литраж
+    price_per_liter = self.FUEL_PRICES[nozzle.fuel_type]
+    total = liters * price_per_liter
+
+    confirm = input("Подтвердить оплату? (y/n)\n> ").strip().lower()
+    if confirm != 'yes':
+        print("Операция отменена.")
+        return
+
+    try:
+        nozzle.tank.withdraw(int(liters))
+        self.stats["cars_served"] += 1
+        self.stats["fuel_sold"][nozzle.fuel_type] += int(liters)
+        self.stats["fuel_income"][nozzle.fuel_type] += total
+        self.stats["total_income"] += total
+        self.log_operation("Продажа", f"{int(liters)} л {nozzle.fuel_type} на колонке {pump_id}, сумма: {total:.2f} ₽")
+        print("Операция выполнена успешно.")
+    except ValueError as e:
+        print(f"ОШИБКА:\n{e}")

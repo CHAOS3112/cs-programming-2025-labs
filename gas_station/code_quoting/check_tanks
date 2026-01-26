@@ -1,0 +1,3 @@
+def check_tanks(self):
+    for i, tank in enumerate(self.tanks, 1):
+        print(f"{i}) {tank}")

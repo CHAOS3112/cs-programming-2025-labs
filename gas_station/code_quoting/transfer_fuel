@@ -1,0 +1,10 @@
+def transfer_fuel(self):
+    if self.emergency_mode:
+        print("Нельзя перекачивать топливо в аварийном режиме!")
+        return
+
+    sources = [t for t in self.tanks if t.enabled]
+    # выбор источника, выбор приемника того же типа топлива
+    source.withdraw(liters)
+    target.refill(liters)
+    self.log_operation("Перекачка", f"{liters} л {source.fuel_type} из №{source.tank_id} в №{target.tank_id}")

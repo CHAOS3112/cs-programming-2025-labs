@@ -1,0 +1,27 @@
+def save_to_files(self):
+    data = {
+        "tanks": [t.to_dict() for t in self.tanks],
+        "operations": [op.to_dict() for op in self.operations],
+        "stats": self.stats,
+        "emergency_mode": self.emergency_mode
+    }
+    with open("gas_station_data.json", "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+def load_from_files(self):
+    if not os.path.exists("gas_station_data.json"):
+        return
+    try:
+        with open("gas_station_data.json", "r", encoding="utf-8") as f:
+            data = json.load(f)
+        self.tanks = [Tank.from_dict(t) for t in data["tanks"]]
+        self.operations = [Operation.from_dict(op) for op in data["operations"]]
+        self.stats = data["stats"]
+        self.emergency_mode = data.get("emergency_mode", False)
+
+        # Пересоздаем колонки с новыми ссылками на цистерны
+        tank_map = {(t.fuel_type, t.tank_id): t for t in self.tanks}
+        ...
+        # (далее пересоздается self.pumps аналогично _init_default_setup)
+    except Exception as e:
+        print(f"Ошибка загрузки данных: {e}")

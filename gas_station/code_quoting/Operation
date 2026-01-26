@@ -1,0 +1,15 @@
+class Operation:
+    def __init__(self, op_type: str, details: str, timestamp: str = None):
+        self.op_type = op_type
+        self.details = details
+        self.timestamp = timestamp or datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+    def to_dict(self):
+        return {"op_type": self.op_type, "details": self.details, "timestamp": self.timestamp}
+
+    @classmethod
+    def from_dict(cls, data):
+        return cls(data["op_type"], data["details"], data["timestamp"])
+
+    def __str__(self):
+        return f"[{self.timestamp}] {self.op_type}: {self.details}"

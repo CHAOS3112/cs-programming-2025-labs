@@ -1,0 +1,8 @@
+def refill_tank(self):
+    if self.emergency_mode:
+        print("Нельзя пополнять топливо в аварийном режиме!")
+        return
+
+    # меню выбора цистерны и ввод литров
+    tank.refill(liters)
+    self.log_operation("Пополнение", f"Цистерна {tank.fuel_type} №{tank.tank_id}, +{liters} л")

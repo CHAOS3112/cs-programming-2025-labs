@@ -1,0 +1,6 @@
+def show_pumps(self):
+    for pump in self.pumps:
+        print(f"Колонка {pump.pump_id}:")
+        for nozzle in pump.get_all_fuels():
+            status = "РАБОТАЕТ" if nozzle.is_available() else "НЕ РАБОТАЕТ"
+            print(f"  - {nozzle.fuel_type} (цистерна {nozzle.get_tank_info()}) → {status}")

@@ -1,0 +1,20 @@
+class GasStation:
+    FUEL_PRICES = {
+        FuelType.AI92: 57.50,
+        FuelType.AI95: 58.30,
+        FuelType.AI98: 61.20,
+        FuelType.DT: 54.80
+    }
+
+    def __init__(self):
+        self.tanks: List[Tank] = []
+        self.pumps: List[Pump] = []
+        self.operations: List[Operation] = []
+        self.stats = {
+            "total_income": 0.0,
+            "cars_served": 0,
+            "fuel_sold": {ft: 0 for ft in [FuelType.AI92, FuelType.AI95, FuelType.AI98, FuelType.DT]},
+            "fuel_income": {ft: 0.0 for ft in [FuelType.AI92, FuelType.AI95, FuelType.AI98, FuelType.DT]}
+        }
+        self.emergency_mode = False
+        self._init_default_setup()

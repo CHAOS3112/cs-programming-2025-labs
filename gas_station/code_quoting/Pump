@@ -1,0 +1,14 @@
+class Pump:
+    def __init__(self, pump_id: int, nozzles: List[Nozzle]):
+        self.pump_id = pump_id
+        self.nozzles = nozzles
+
+    def get_available_fuels(self) -> List[Nozzle]:
+        return [n for n in self.nozzles if n.is_available()]
+
+    def get_all_fuels(self) -> List[Nozzle]:
+        return self.nozzles
+
+    def __str__(self):
+        fuels = ", ".join([n.fuel_type for n in self.nozzles])
+        return f"Колонка {self.pump_id}: {fuels}"

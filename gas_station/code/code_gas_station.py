@@ -4,9 +4,9 @@ from datetime import datetime
 from typing import List, Dict, Optional
 
 
-# -----------------------------
+
 # Классы данных
-# -----------------------------
+
 
 class FuelType:
     AI92 = "АИ-92"
@@ -20,7 +20,7 @@ class Tank:
         self.fuel_type = fuel_type
         self.tank_id = tank_id
         self.max_volume = max_volume
-        self.current_volume = max_volume  # начинаем с полных цистерн
+        self.current_volume = max_volume  # полные цистерны
         self.min_level = min_level
         self.enabled = True
 
@@ -139,7 +139,7 @@ class GasStation:
         self._init_default_setup()
 
     def _init_default_setup(self):
-        # Создаем цистерны
+        # цистерны
         self.tanks = [
             Tank(FuelType.AI92, 1, 20000),
             Tank(FuelType.AI95, 1, 20000),
@@ -148,7 +148,7 @@ class GasStation:
             Tank(FuelType.DT, 1, 25000)
         ]
 
-        # Связываем колонки с цистернами
+        # Связь колонки с цистернами
         tank_map = {(t.fuel_type, t.tank_id): t for t in self.tanks}
 
         # Схема подключения
@@ -163,12 +163,12 @@ class GasStation:
             8: [FuelType.AI95, FuelType.DT]
         }
 
-        # Назначаем цистерны
+        # Назначаем цистерн
         for pump_id, fuels in pump_config.items():
             nozzles = []
             for fuel in fuels:
                 if fuel == FuelType.AI95:
-                    # Колонки 1-4 → цистерна 1, 5-8 → цистерна 2
+                    # Колонки 1-4 -> цистерна 1, 5-8 -> цистерна 2
                     tank_id = 1 if pump_id <= 4 else 2
                 else:
                     tank_id = 1
@@ -197,7 +197,7 @@ class GasStation:
             self.stats = data["stats"]
             self.emergency_mode = data.get("emergency_mode", False)
 
-            # Пересоздаем колонки с новыми ссылками на цистерны
+            # Пересоздается колонка с новыми ссылками на цистерны
             tank_map = {(t.fuel_type, t.tank_id): t for t in self.tanks}
             pump_config = {
                 1: [FuelType.AI92, FuelType.AI95],
@@ -226,7 +226,7 @@ class GasStation:
     def log_operation(self, op_type: str, details: str):
         op = Operation(op_type, details)
         self.operations.append(op)
-        if len(self.operations) > 100:  # ограничим историю
+        if len(self.operations) > 100:  # лимит истории 100 записей
             self.operations.pop(0)
 
     def get_disabled_tanks(self) -> List[Tank]:
@@ -285,7 +285,7 @@ class GasStation:
             print(f"\nСтоимоsсть:\n{liters} л × {price_per_liter:.2f} ₽ = {total:.2f} ₽\n")
 
             confirm = input("Подтвердить оплату? (y/n)\n> ").strip().lower()
-            if confirm != 'yes':
+            if confirm != 'y':
                 print("Операция отменена.")
                 input("Нажмите Enter для возврата в меню...")
                 return
@@ -354,7 +354,7 @@ class GasStation:
         if not self.operations:
             print("История пуста.")
         else:
-            for op in reversed(self.operations[-20:]):  # последние 20
+            for op in reversed(self.operations[-20:]):  # последние 20 операций
                 print(op)
         input("\nНажмите Enter для возврата в меню...")
 
@@ -507,8 +507,8 @@ class GasStation:
             print("Система управления заправочной станцией")
             print("========================================\n")
 
-            if self.emergency_mode:
-                print("!!! АВАРИЙНЫЙ РЕЖИМ АКТИВЕН !!!\n")
+            if self.emergency_mode:                             #аварийный режиим
+                print("!!! АВАРИЙНЫЙ РЕЖИМ АКТИВЕН !!!\n") 
             else:
                 self.show_warning()
 
@@ -558,9 +558,7 @@ class GasStation:
                 input("Нажмите Enter для продолжения...")
 
 
-# -----------------------------
 # Запуск программы
-# -----------------------------
 
 if __name__ == "__main__":
     station = GasStation()

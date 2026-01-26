@@ -1,0 +1,466 @@
+\documentclass{vvsu}
+
+\vvsuyear{2026}
+
+%%%%%%%%%%%%%%%%%%%
+
+\usepackage{graphicx} % для изображений
+\usepackage{tabularray} % для таблиц
+\usepackage{siunitx} % для обозначений (процент, градус)
+\usepackage{csquotes} % для корректной работы с кавычками
+\usepackage{listings} % для листингов кода
+
+% Список путей, где будут искаться изображения и файлы
+\graphicspath{{images/}}
+
+% Автор документа
+\author{А. Е. Филатов}
+
+% Настройка стилей для листингов кода
+\input{listing_styles.tex}
+
+%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+% Шапка
+\vvsuhead{\linespread{1}\selectfont{}МИНОБРНАУКИ РОССИИ\\
+\vspace{10pt}Федеральное государственное бюджетное образовательное учреждение\\
+высшего образования\\
+\fontsize{13}{13}\selectfont{}<<ВЛАДИВОСТОКСКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ>>\\
+(ФГБОУ ВО <<ВВГУ>>)\\
+\vspace{10pt}\fontsize{12}{12}\selectfont{}ИНСТИТУТ ИНФОРМАЦИОННЫХ ТЕХНОЛОГИЙ И АНАЛИЗА ДАННЫХ\\
+КАФЕДРА ИНФОРМАЦИОННЫХ ТЕХНОЛОГИЙ И СИСТЕМ}
+
+% Название отчета
+\title{Отчет\\По разработке системы управления автозаправочной станции на PYTHON}
+\subtitle{по дисциплине\\<<Информатика и программирование>>}
+
+% Участники работы
+\member{Студент\\ гр. БИН-25-3}{А. Е. Филатов}
+\member{Ассистент\\ преподавателя}{М.В. Водяницкий}
+
+% Вывод титульника
+\maketitle
+
+% Содержание
+\toc
+
+% Глава - Введение
+\section{Введение}
+\label{sec:execution}
+Автоматизация процессов на автозаправочных станциях (АЗС) является важным аспектом современного управления топливными ресурсами и обслуживания клиентов. В данном отчете представлена разработка системы управления АЗС на языке программирования Python. Целью данной работы является создание эффективного и надежного программного обеспечения, которое позволит оптимизировать процессы продажи топлива, учета запасов и взаимодействия с клиентами.
+  
+Целью данной лабороторной работы является разработка системы управления АЗС, полностью соответсвующая техническому заданию с упором на надужность данной системы и удобство использования для конечного пользователя.
+
+  % Подглава - Принципы Проектирования
+\subsection{Принципы Проектирования}
+  При разработке были заложены следующие принципы проектирования:
+\begin{vvsu_itemize}
+    \item Модульность: Система была разработана с использованием модульного подхода, что позволяет легко добавлять новые функции и изменять существующие без влияния на другие части системы.
+    \item Пользовательский интерфейс: Особое внимание было уделено созданию интуитивно понятного интерфейса для операторов АЗС, что способствует быстрому обучению и снижению ошибок при эксплуатации.
+    \item Надежность: В систему были встроены механизмы обработки ошибок и резервного копирования данных для обеспечения непрерывной работы АЗС.
+    \item Производительность: Оптимизация кода и использование эффективных алгоритмов позволили обеспечить высокую скорость обработки транзакций и управления запасами топлива для удобства пользования.
+    \item Безопасность: Внедрение мер безопасности для защиты данных клиентов и предотвращения несанкционированного доступа к системе.
+\end{vvsu_itemize}
+  Данные принципы проектирования обеспечивают создание системы управления АЗС, которая отвечает современным требованиям и способствует эффективной работе автозаправочных станций.
+
+  % Глава - Выполнение работы
+\section{Выполнение работы}
+\label{sec:execution}
+
+  % Подглава - Артхитектура программы
+  \subsection{Артхитектура программы}
+  Архитектура представленной программы модульная и объектно-ориентированная, с чётким разделением ответственности между компонентами.
+  Основные компоненты:
+\begin{vvsu_itemize}
+  \item Это классы, описывающие сущности АЗС и их поведение;
+  \item Основной контроллер "GasStation";
+  \item Система сохранения состояния "gas station data.json";
+  \item Безопасность и ограничения "min level", "max level" и "can supply".
+\end{vvsu_itemize}
+
+
+% Подглава - Импорт библиотек
+\subsection{Импорт библеотек}
+  В начале программы импортируются необходимые модули и библиотеки, которые обеспечивают функциональность и поддержку различных операций.
+На рисунке \ref{fig:../code_quoting/importModuls} представлен код программы.
+
+\begin{vvsu_figure}{Листинг программы для importModuls}{fig:../code_quoting/importModuls}
+  \begin{minipage}{.75\textwidth}
+    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{../code_quoting/importModuls}
+  \end{minipage}
+\end{vvsu_figure}
+
+\begin{vvsu_itemize}
+  \item json - для сохранения/загрузки данных в JSON-формате;
+  \item os - для работы с операционной системой (очистка экрана, проверка файлов);
+  \item datetime - для получения текущей даты и времени;
+  \item typing - для аннотации типов (улучшает читаемость кода).
+\end{vvsu_itemize}
+  
+  Это необходимо для обеспечения функциональности программы и взаимодействия с внешними ресурсами.
+
+
+% Подглава - Класс FuelType
+\subsection{Класс FuelType}
+  Класс, содержащий строки с названиями видов топлива: "АИ-92", "АИ-95", "АИ-98", "ДТ".
+На рисунке \ref{fig:../code_quoting/FuelType} представлен код программы.
+
+\begin{vvsu_figure}{Листинг программы для FuelType}{fig:../code_quoting/FuelType}
+  \begin{minipage}{.75\textwidth}
+    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{../code_quoting/FuelType}
+  \end{minipage}
+\end{vvsu_figure}
+  
+  Централизует символические имена топлива, уменьшает риск опечаток. Плюс данной константы, это- изменил в одном месте, то изменилось повсеместно.
+
+
+% Подглава - Класс Tank
+\subsection{Класс Tank}
+  Моделирует резервуар для хранения топлива. Хранит информацию о типе топлива, идентификаторе, максимальном и текущем объёме, минимальном допустимом уровне и состоянии (включена/отключена).
+На рисунке \ref{fig:../code_quoting/Tank} представлен код программы.
+
+\begin{vvsu_figure}{Листинг программы для Tank}{fig:../code_quoting/Tank}
+  \begin{minipage}{.75\textwidth}
+    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{../code_quoting/Tank}
+  \end{minipage}
+\end{vvsu_figure}
+
+\begin{vvsu_itemize}
+  \item is low() — проверяет, упал ли уровень ниже порогового;
+  \item disable if low() — автоматически отключает цистерну при низком уровне;
+  \item can supply(), withdraw() — обеспечивают безопасную выдачу топлива;
+  \item refill() — пополнение топлива с проверкой на переполнение;
+  \item to dict() и from dict() — преобразования или преобразование объекта для сохранения состояния.
+\end{vvsu_itemize}
+  
+  Очень важный блок: модель «реальной» цистерны, с проверками безопасности (нет выдачи если мало топлива, нет переполнения при пополнении).
+
+
+% Подглава - Класс Nozzle 
+\subsection{Класс Nozzle}
+  Связывает конкретный вид топлива с конкретной цистерной для колонки (помогает представить пистолет на колонке), а is available() говорит, можно ли из этого сопла раздавать (если связанная цистерна включена).
+На рисунке \ref{fig:../code_quoting/Nozzle} представлен код программы.
+
+\begin{vvsu_figure}{Листинг программы для Nozzle}{fig:../code_quoting/Nozzle}
+  \begin{minipage}{.75\textwidth}
+    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{../code_quoting/Nozzle}
+  \end{minipage}
+\end{vvsu_figure}
+
+\begin{vvsu_itemize}
+  \item Связывает конкретный вид топлива с конкретной цистерной для колонки (помогает представить пистолет на колонке);
+  \item is available() говорит, можно ли из этого сопла раздавать (если связанная цистерна включена).
+\end{vvsu_itemize}
+  
+  Отделяет логику представления топлива на колонке от самой цистерны. Упрощает работу с разными соплами на одной колонке.
+
+
+% Подглава - Класс Pump
+\subsection{Класс Pump}
+  Группирует сопла в одну колонку с идентификатором. Возвращает все сопла или только доступные (если цистерна включена).
+На рисунке \ref{fig:../code_quoting/Pump} представлен код программы.
+
+\begin{vvsu_figure}{Листинг программы для Pump}{fig:../code_quoting/Pump}
+  \begin{minipage}{.75\textwidth}
+    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{../code_quoting/Pump}
+  \end{minipage}
+\end{vvsu_figure}
+
+\begin{vvsu_itemize}
+  \item Упрощает меню выбора колонки и отображение, какие топлива доступны;
+  \item Логическая модель «колонки» соответствует реальному АЗС.
+\end{vvsu_itemize}
+  
+  Нужен для структуры станции: колонки состоят из сопел, и на уровне Pump удобно работать с интерфейсом.
+
+
+% Подглава - Класс Operation
+\subsection{Класс Operation}
+  Логирует каждое действие на АЗС: продажу, пополнение, аварию и т.д.
+На рисунке \ref{fig:../code_quoting/Operation} представлен код программы.
+
+\begin{vvsu_figure}{Листинг программы для Operation}{fig:../code_quoting/Operation}
+  \begin{minipage}{.75\textwidth}
+    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{../code_quoting/Operation}
+  \end{minipage}
+\end{vvsu_figure}
+
+  Модуль логирования для понимания, что происходило в системе.
+
+
+% Подглава - Класс GasStation 
+\subsection{Класс GasStation}
+  Это центральный класс, объединяющий все компоненты и реализующий пользовательский интерфейс.
+На рисунке \ref{fig:../code_quoting/GasStation} представлен код программы.
+
+\begin{vvsu_figure}{Листинг программы для GasStation}{fig:../code_quoting/GasStation}
+  \begin{minipage}{.75\textwidth}
+    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{../code_quoting/GasStation}
+  \end{minipage}
+\end{vvsu_figure}
+
+\begin{vvsu_itemize}
+  \item Инициализация (init default setup)- Создаёт 5 цистерн (включая две для АИ-95). Настраивает 8 колонок с разным набором топлива. Реализует логику распределения: колонки 14 используют первую цистерну АИ-95, 5-8- вторую.
+  \item Сохранение и загрузка данных. Все данные (цистерны, операции, статистика) сохраняются в gas station data.json. При загрузке восстанавливается не только состояние, но и связи между колонками и цистернами.
+  \item Основные функции меню: обслужить клиента, проверка цистерн, пополнение топлива, баланс и статистика, история операций, перекачка топлива, управление цистернами, аварийный режим.
+\end{vvsu_itemize}
+  
+  Сердце программы: дальше идут методы, которые реализуют меню и действия.
+
+
+% Подглава - Класс Pump
+\subsection{Класс Pump}
+  Группирует сопла в одну колонку с идентификатором. Возвращает все сопла или только доступные (если цистерна включена).
+На рисунке \ref{fig:../code_quoting/Pump} представлен код программы.
+
+\begin{vvsu_figure}{Листинг программы для Pump}{fig:../code_quoting/Pump}
+  \begin{minipage}{.75\textwidth}
+    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{../code_quoting/Pump}
+  \end{minipage}
+\end{vvsu_figure}
+
+\begin{vvsu_itemize}
+  \item Упрощает меню выбора колонки и отображение, какие топлива доступны;
+  \item Логическая модель «колонки» соответствует реальному АЗС.
+\end{vvsu_itemize}
+
+  Нужен для структуры станции: колонки состоят из сопел, и на уровне Pump удобно работать с интерфейсом.
+
+
+% Подглава - Метод  init default setup
+\subsection{Метод init default setup}
+  Даёт реалистичную схему подключения колонок и цистерн.
+На рисунке \ref{fig:../code_quoting/init_default_setup} представлен код программы.
+
+\begin{vvsu_figure}{Листинг программы для init default setup}{fig:../code_quoting/init_default_setup}
+  \begin{minipage}{.75\textwidth}
+    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{../code_quoting/init_default_setup}
+  \end{minipage}
+\end{vvsu_figure}
+
+\begin{vvsu_itemize}
+  \item Создает 5 цистерн разных типов;
+  \item Настраивает 8 заправочных колонок;
+  \item Распределяет цистерны по колонкам (особенно для АИ-95).
+\end{vvsu_itemize}
+  
+  Важный блок для моделирования физического устройства: как именно связаны колонки и цистерны.
+
+
+% Подглава - Сохранение и загрузка состояния
+\subsection{Сохранение и загрузка состояния}
+  Cохраняет все данные АЗС, а также восстанавливает их при запуске.
+  На рисунке \ref{fig:../code_quoting/save} представлен код программы.
+
+\begin{vvsu_figure}{Листинг программы для сохранения и загрузка состояния}{fig:../code_quoting/save}
+  \begin{minipage}{.75\textwidth}
+    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{../code_quoting/save}
+  \end{minipage}
+\end{vvsu_figure}
+
+\begin{vvsu_itemize}
+  \item save to files - сохраняет все данные АЗС (состояние цистерн, операции, статистику) в JSON-файл;
+  \item load from files - загружает данные из JSON-файла при запуске.
+\end{vvsu_itemize}
+  
+  Надёжный способ продолжать работу с данными после перезапуска программы и обработка ошибок предотвращает падение при проблемах с файлом.
+
+
+% Подглава - Вспомогательные методы
+\subsection{Вспомогательные методы}
+  Централизованное логирование упрощает отслеживание событий. Ограничение длины истории экономит память и делает вывод короче и понятнее.
+  На рисунке \ref{fig:../code_quoting/log_operation_and_get_disabled_tanks} представлен код программы.
+
+\begin{vvsu_figure}{Листинг программы для вспомогательных методов}{fig:../code_quoting/log_operation_and_get_disabled_tanks}
+  \begin{minipage}{.75\textwidth}
+    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{../code_quoting/log_operation_and_get_disabled_tanks}
+  \end{minipage}
+\end{vvsu_figure}
+
+\begin{vvsu_itemize}
+  \item log operation: добавляет запись в историю и держит историю в пределах 100 различных записей.
+  \item get disabled tanks: возвращает список отключённых цистерн.
+\end{vvsu_itemize}
+  
+  Полезные утилиты для ведения истории и проверки состояния.
+
+
+% Подглава - Метод serve customer
+\subsection{Метод serve customer}
+  Обслуживание клиента / касса, сокращённая цитата, ключевые части.
+  На рисунке \ref{fig:../code_quoting/serve_customer} представлен код программы.
+
+\begin{vvsu_figure}{Листинг программы для метода serve customer}{fig:../code_quoting/serve_customer}
+  \begin{minipage}{.75\textwidth}
+    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{../code_quoting/serve_customer}
+  \end{minipage}
+\end{vvsu_figure}
+
+\begin{vvsu_itemize}
+  \item Ведет весь диалог продажи топлива: выбор колонки, выбор топлива, ввод литров, расчет суммы, подтверждение, списание топлива из цистерны, обновление статистики и логирование действий над заправочной станцией;
+  \item Обрабатывает ошибки (недостаточно топлива, отключенная цистерна).
+\end{vvsu_itemize}
+
+  Самая важная функция для повседневной работы станции; реализует пользовательский поток продажи с базовыми проверками.
+
+  
+% Подглава -check tanks
+\subsection{check tanks}
+  Печатает список всех цистерн с текущими уровнями и состоянием.
+  На рисунке \ref{fig:../code_quoting/check_tanks} представлен код программы.
+
+\begin{vvsu_figure}{Листинг программы для метода check tanks}{fig:../code_quoting/check_tanks}
+  \begin{minipage}{.75\textwidth}
+    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{../code_quoting/check_tanks}
+  \end{minipage}
+\end{vvsu_figure}
+
+  Нужный простой дисплей статуса цистерн. Быстрый контроль состояния, удобный для оператора.
+
+
+% Подглава -refill tank
+\subsection{refill tank}
+  Позволяет оператору добавить топливо в выбранную цистерну (с проверкой на переполнение). Логирует операцию.
+  На рисунке \ref{fig:../code_quoting/refill_tank} представлен код программы.
+
+\begin{vvsu_figure}{Листинг программы для метода refill tank}{fig:../code_quoting/refill_tank}
+  \begin{minipage}{.75\textwidth}
+    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{../code_quoting/refill_tank}
+  \end{minipage}
+\end{vvsu_figure}
+
+  Операция пополнения, с защитой от переполнения. Ведется учёт пополнений.
+
+
+% Подглава -show balance
+\subsection{show balance}
+  Печатает ключевые показатели: число обслуженных машин, общий доход, сколько каждого топлива продано и сколько принесло денег.
+  На рисунке \ref{fig:../code_quoting/show_balance} представлен код программы.
+
+\begin{vvsu_figure}{Листинг программы для метода show balance}{fig:../code_quoting/show_balance}
+  \begin{minipage}{.75\textwidth}
+    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{../code_quoting/show_balance}
+  \end{minipage}
+\end{vvsu_figure}
+
+  Быстрое подведение итогов работы смены или дня.
+
+
+% Подглава - transfer fuel
+\subsection{transfer fuel}
+  Позволяет перемещать топливо между цистернами того же типа (например, перенести часть АИ-95 из одной цистерны в другую). Проверяет, что есть место в приёмнике и что источник имеет достаточно топлива.
+  На рисунке \ref{fig:../code_quoting/transfer_fuel} представлен код программы.
+
+\begin{vvsu_figure}{Листинг программы для метода transfer fuel}{fig:../code_quoting/transfer_fuel}
+  \begin{minipage}{.75\textwidth}
+    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{../code_quoting/transfer_fuel}
+  \end{minipage}
+\end{vvsu_figure}
+\begin{vvsu_itemize}
+  \item Практичная функция для балансировки уровней и подготовки цистерн;
+  \item Помогает избежать ситуаций, когда одна цистерна пустует, а другая переполнена.
+\end{vvsu_itemize}
+
+  Реалистичная операция обслуживания склада топлива с проверками безопасности.
+
+
+% Подглава - manage tanks
+\subsection{manage tanks}
+  Дает оператору возможность вручную включать/отключать цистерны. При включении проверяется, не ниже ли уровень минимального порога.
+  На рисунке \ref{fig:../code_quoting/manage_tanks} представлен код программы.
+
+\begin{vvsu_figure}{Листинг программы для метода manage tanks}{fig:../code_quoting/manage_tanks}
+  \begin{minipage}{.75\textwidth}
+    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{../code_quoting/manage_tanks}
+  \end{minipage}
+\end{vvsu_figure}
+\begin{vvsu_itemize}
+  \item Позволяет контролировать какие цистерны используются (например, при ремонте или планировании);
+  \item Предотвращает включение пустых цистерн.
+\end{vvsu_itemize}
+
+  Удобный интерфейс администрирования состояния цистерн.
+
+
+% Подглава -show pumps 
+\subsection{show pumps}
+  Печатает для каждой колонки, какие сопла есть и доступны ли они в данный момент.
+  На рисунке \ref{fig:../code_quoting/show_pumps} представлен код программы.
+
+\begin{vvsu_figure}{Листинг программы для метода show pumps}{fig:../code_quoting/show_pumps}
+  \begin{minipage}{.75\textwidth}
+    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{../code_quoting/show_pumps}
+  \end{minipage}
+\end{vvsu_figure}
+
+  Наглядный статус колонок для оператора.
+
+
+% Подглава - show warning
+\subsection{show warning}
+  При запуске меню показывает, если есть отключённые цистерны и почему (низкий уровень или отключили вручную).
+  На рисунке \ref{fig:../code_quoting/emergency_and_exit_emergency} представлен код программы.
+
+\begin{vvsu_figure}{Листинг программы для метода show warning}{fig:../code_quoting/show_warning}
+  \begin{minipage}{.75\textwidth}
+    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{../code_quoting/show_warning}
+  \end{minipage}
+\end{vvsu_figure}
+
+  Удобное напоминание оператору, повышает внимательность.
+
+
+% Подглава - run
+\subsection{run}
+  Загружает данные при старте, отображает меню в цикле, читает выбор пользователя и вызывает соответствующие методы. На выходе сохраняет данные и завершает программу.
+  На рисунке \ref{fig:../code_quoting/run} представлен код программы.
+
+\begin{vvsu_figure}{Листинг программы для метода run}{fig:../code_quoting/run}
+  \begin{minipage}{.75\textwidth}
+    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{../code_quoting/run}
+  \end{minipage}
+\end{vvsu_figure}
+
+  Типичный простой консольный интерфейс, удобный для демонстрации и для использования вручную.
+
+
+% Подглава - start program
+\subsection{start program}
+  Запускает программу, если файл выполнен напрямую (а не импортирован как модуль).
+  На рисунке \ref{fig:../code_quoting/start_program} представлен код программы.
+
+\begin{vvsu_figure}{Листинг программы для метода start program}{fig:../code_quoting/start_program}
+  \begin{minipage}{.75\textwidth}
+    \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{../code_quoting/start_program}
+  \end{minipage}
+\end{vvsu_figure}
+
+  Вся программа запускается из этого блока.
+
+
+% Глава - Тестирование
+\section{Тестирование}
+\label{sec:execution}
+  Тестирование системы управления автозаправочной станцией проводилось с целью проверки корректности работы всех функциональных компонентов и обеспечения надежности системы. Были выполнены следующие виды тестирования:
+\begin{vvsu_itemize}
+  \item Попытка заправиться от откключенной и корректно функционирующей цистерны;
+  \item Тестирование производительности: Оценка скорости обработки запросов и отклика системы при различных нагрузках.
+  \item Сохранение и востоновления состояния;
+  \item Ручное включение цистерн после включения;
+  \item Пополнение цистерн с проверкой на переполнение.
+\end{vvsu_itemize}
+
+  Все запуски прошли успеешно, система работает корректрно и стабильно.
+
+
+% Глава - Заключение
+\section{Заключение}
+\label{sec:execution}
+  Разработный полностью работостпособный прототип системы управления автозаправочной станцией на языке Python продемонстрировал свою эффективность и надежность в ходе тестирования. Система успешно реализует основные функции, необходимые для управления АЗС, включая обслуживание клиентов, учет топлива, управление цистернами и ведение истории операций.
+
+  Все поставленные цели были достигнуты, и система соответствует требованиям технического задания. В ходе разработки были применены принципы программирования, что обеспечило модульность, удобство использования и безопасность системы.
+
+
+\end{document}

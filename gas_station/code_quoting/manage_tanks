@@ -1,0 +1,12 @@
+def manage_tanks(self):
+    if self.emergency_mode:
+        print("Управление цистернами недоступно в аварийном режиме!")
+        return
+
+    # варианты: включить цистерну (если не ниже минимума), или отключить
+    if action == "1":
+        disabled = [t for t in self.tanks if not t.enabled]
+        # попытка включить
+    elif action == "2":
+        enabled = [t for t in self.tanks if t.enabled]
+        # отключение

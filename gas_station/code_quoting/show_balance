@@ -1,0 +1,7 @@
+def show_balance(self):
+    print(f"Обслужено автомобилей: {self.stats['cars_served']}")
+    print(f"Общий доход: {self.stats['total_income']:,.2f} ₽")
+    for ft in [FuelType.AI92, FuelType.AI95, FuelType.AI98, FuelType.DT]:
+        liters = self.stats["fuel_sold"][ft]
+        income = self.stats["fuel_income"][ft]
+        print(f"{ft:<6} - {liters} л ({income:,.2f} ₽)")

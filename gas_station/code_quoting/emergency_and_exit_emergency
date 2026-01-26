@@ -1,0 +1,18 @@
+def emergency(self):
+    if self.emergency_mode:
+        print("\nАЗС уже в аварийном режиме!")
+    else:
+        self.emergency_mode = True
+        for tank in self.tanks:
+            tank.enabled = False
+        self.log_operation("АВАРИЯ", "Система переведена в аварийный режим")
+        print("\n!!! АВАРИЙНАЯ СИТУАЦИЯ !!!")
+        print("Все цистерны заблокированы.")
+
+def exit_emergency(self):
+    if not self.emergency_mode:
+        print("АЗС не в аварийном режиме.")
+    else:
+        self.emergency_mode = False
+        self.log_operation("Выход из аварии", "Аварийный режим отключен")
+        print("Аварийный режим отключен. Цистерны остаются отключенными — включайте вручную.")

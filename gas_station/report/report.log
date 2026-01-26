@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.14)  24 JAN 2026 12:30
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.14)  26 JAN 2026 17:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Git VSC/https-github.com-new/labs/lab7/report/report.tex"
-(c:/Git VSC/https-github.com-new/labs/lab7/report/report.tex
+**"c:/Git VSC/https-github.com-new/gas_station/report/report.tex"
+(c:/Git VSC/https-github.com-new/gas_station/report/report.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-10-24>
 (vvsu.cls
@@ -1470,6 +1470,19 @@ Package csquotes Info: Redefining alias 'default' -> 'russian'.
  (report.aux
 Package babel Info: 'russian' activates 'russian' shorthands.
 (babel)             Reported on input line 10.
+
+
+LaTeX Warning: Label `sec:execution' multiply defined.
+
+
+LaTeX Warning: Label `fig:../code_quoting/Pump' multiply defined.
+
+
+LaTeX Warning: Label `sec:execution' multiply defined.
+
+
+LaTeX Warning: Label `sec:execution' multiply defined.
+
 )
 \openout1 = `report.aux'.
 
@@ -1690,81 +1703,165 @@ xt;"
 (fontspec)             <->"Arial/BI/OT:script=latn;language=dflt;+smcp;mapping=
 tex-text;"
 
- [2
-
-] [3] [4] [5] (report.toc)
+ (report.toc)
 \tf@toc=\write4
 \openout4 = `report.toc'.
 
-
-[2
+ [2
 
 ]
-Overfull \hbox (2.78613pt too wide) in paragraph at lines 210--210
+Overfull \hbox (2.78613pt too wide) in paragraph at lines 50--50
 []\TU/Arial(0)/m/n/14 1 [] 
  []
 
 
-Overfull \hbox (3.57178pt too wide) in paragraph at lines 214--214
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 57--57
 []\TU/Arial(0)/m/n/13 1.1 [] 
+ []
+
+[3
+
+
+]
+Overfull \hbox (2.78613pt too wide) in paragraph at lines 69--69
+[]\TU/Arial(0)/m/n/14 2 [] 
+ []
+
+
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 73--73
+[]\TU/Arial(0)/m/n/13 2.1 [] 
+ []
+
+
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 85--85
+[]\TU/Arial(0)/m/n/13 2.2 [] 
  []
 
 
 (C:\Users\Machcreator\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1
 .sty
 File: lstlang1.sty 2025/10/06 1.11 listings language file
-) (../code/7.1.py)
-Overfull \hbox (3.57178pt too wide) in paragraph at lines 232--232
-[]\TU/Arial(0)/m/n/13 1.2 [] 
+) (../code_quoting/importModuls)
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 106--106
+[]\TU/Arial(0)/m/n/13 2.3 [] 
  []
 
-(../code/7.2.py)
-Overfull \hbox (3.57178pt too wide) in paragraph at lines 250--250
-[]\TU/Arial(0)/m/n/13 1.3 [] 
+(../code_quoting/FuelType)
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 120--120
+[]\TU/Arial(0)/m/n/13 2.4 [] 
  []
 
-(../code/7.3.py) [3
+(../code_quoting/Tank) [4
 
+] [5]
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 142--142
+[]\TU/Arial(0)/m/n/13 2.5 [] 
+ []
+
+(../code_quoting/Nozzle)
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 161--161
+[]\TU/Arial(0)/m/n/13 2.6 [] 
+ []
+
+(../code_quoting/Pump) [6]
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 180--180
+[]\TU/Arial(0)/m/n/13 2.7 [] 
+ []
+
+(../code_quoting/Operation)
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 194--194
+[]\TU/Arial(0)/m/n/13 2.8 [] 
+ []
+
+(../code_quoting/GasStation) [7]
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 214--214
+[]\TU/Arial(0)/m/n/13 2.9 [] 
+ []
+
+(../code_quoting/Pump)
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 233--233
+[]\TU/Arial(0)/m/n/13 2.10 [] 
+ []
+
+(../code_quoting/init_default_setup) [8]
+Overfull \hbox (4.28223pt too wide) in paragraph at lines 253--253
+[]\TU/Arial(0)/m/n/13 2.11 [] 
+ []
+
+(../code_quoting/save) [9]
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 272--272
+[]\TU/Arial(0)/m/n/13 2.12 [] 
+ []
+
+(../code_quoting/log_operation_and_get_disabled_tanks) [10]
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 291--291
+[]\TU/Arial(0)/m/n/13 2.13 [] 
+ []
+
+(../code_quoting/serve_customer) [11]
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 310--310
+[]\TU/Arial(0)/m/n/13 2.14 [] 
+ []
+
+(../code_quoting/check_tanks)
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 324--324
+[]\TU/Arial(0)/m/n/13 2.15 [] 
+ []
+
+(../code_quoting/refill_tank)
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 338--338
+[]\TU/Arial(0)/m/n/13 2.16 [] 
+ []
+
+(../code_quoting/show_balance) [12]
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 352--352
+[]\TU/Arial(0)/m/n/13 2.17 [] 
+ []
+
+(../code_quoting/transfer_fuel)
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 370--370
+[]\TU/Arial(0)/m/n/13 2.18 [] 
+ []
+
+(../code_quoting/manage_tanks)
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 388--388
+[]\TU/Arial(0)/m/n/13 2.19 [] 
+ []
+
+(../code_quoting/show_pumps) [13]
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 402--402
+[]\TU/Arial(0)/m/n/13 2.20 [] 
+ []
+
+
+LaTeX Warning: Reference `fig:../code_quoting/emergency_and_exit_emergency' on 
+page 14 undefined on input line 404.
+
+(../code_quoting/show_warning)
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 416--416
+[]\TU/Arial(0)/m/n/13 2.21 [] 
+ []
+
+(../code_quoting/run) [14]
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 430--430
+[]\TU/Arial(0)/m/n/13 2.22 [] 
+ []
+
+(../code_quoting/start_program) [15]
+Overfull \hbox (2.78613pt too wide) in paragraph at lines 444--444
+[]\TU/Arial(0)/m/n/14 3 [] 
+ []
+
+[16
 
 ]
-Overfull \hbox (3.57178pt too wide) in paragraph at lines 268--268
-[]\TU/Arial(0)/m/n/13 1.4 [] 
+Overfull \hbox (2.78613pt too wide) in paragraph at lines 459--459
+[]\TU/Arial(0)/m/n/14 4 [] 
  []
 
-(../code/7.4.py) [4]
-Overfull \hbox (3.57178pt too wide) in paragraph at lines 286--286
-[]\TU/Arial(0)/m/n/13 1.5 [] 
- []
-
-(../code/7.5.py) [5]
-Overfull \hbox (3.57178pt too wide) in paragraph at lines 305--305
-[]\TU/Arial(0)/m/n/13 1.6 [] 
- []
-
-(../code/7.6.py)
-Overfull \hbox (3.57178pt too wide) in paragraph at lines 325--325
-[]\TU/Arial(0)/m/n/13 1.7 [] 
- []
-
-(../code/7.7.py) [6]
-Overfull \hbox (3.57178pt too wide) in paragraph at lines 346--346
-[]\TU/Arial(0)/m/n/13 1.8 [] 
- []
-
-(../code/7.8.py)
-Overfull \hbox (3.57178pt too wide) in paragraph at lines 364--364
-[]\TU/Arial(0)/m/n/13 1.9 [] 
- []
-
-(../code/7.9.py) [7]
-Overfull \hbox (4.80176pt too wide) in paragraph at lines 381--381
-[]\TU/Arial(0)/m/n/13 1.10 [] 
- []
-
-(../code/7.11.py)
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 397.
+(hyperref)                removing `\\' on input line 466.
 
 
 (C:\Users\Machcreator\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\se-ut
@@ -1774,22 +1871,31 @@ File: se-utf32be.def 2019/11/29 v1.12 stringenc: UTF-32BE
 (C:\Users\Machcreator\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\se-pd
 fdoc.def
 File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
-) [8] (report.aux)
+) [17
+
+] (report.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-10-24>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package logreq Info: Writing requests to 'report.run.xml'.
 \openout1 = `report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37198 strings out of 402987
- 806725 string characters out of 5447281
- 2129099 words of memory out of 5000000
- 65511 multiletter control sequences out of 15000+600000
- 631225 words of font info for 101 fonts, out of 8000000 for 9000
+ 37349 strings out of 402987
+ 810269 string characters out of 5447281
+ 2204830 words of memory out of 5000000
+ 65634 multiletter control sequences out of 15000+600000
+ 631201 words of font info for 98 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 122i,12n,121p,11261b,32826s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 122i,12n,121p,11263b,32826s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on report.pdf (12 pages).
+Output written on report.pdf (17 pages).
