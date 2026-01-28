@@ -10,18 +10,18 @@
 \contentsline {subsection}{\numberline {2.6}Класс Operation}{7}{subsection.2.6}%
 \contentsline {subsection}{\numberline {2.7}Класс GasStation}{8}{subsection.2.7}%
 \contentsline {subsection}{\numberline {2.8}Класс Pump}{8}{subsection.2.8}%
-\contentsline {subsection}{\numberline {2.9}Метод init default setup}{9}{subsection.2.9}%
+\contentsline {subsection}{\numberline {2.9}Метод init\_default\_setup}{9}{subsection.2.9}%
 \contentsline {subsection}{\numberline {2.10}Сохранение и загрузка состояния}{10}{subsection.2.10}%
 \contentsline {subsection}{\numberline {2.11}Вспомогательные методы}{11}{subsection.2.11}%
-\contentsline {subsection}{\numberline {2.12}Метод serve customer}{12}{subsection.2.12}%
-\contentsline {subsection}{\numberline {2.13}check tanks}{13}{subsection.2.13}%
-\contentsline {subsection}{\numberline {2.14}refill tank}{13}{subsection.2.14}%
-\contentsline {subsection}{\numberline {2.15}show balance}{13}{subsection.2.15}%
-\contentsline {subsection}{\numberline {2.16}transfer fuel}{14}{subsection.2.16}%
-\contentsline {subsection}{\numberline {2.17}manage tanks}{14}{subsection.2.17}%
-\contentsline {subsection}{\numberline {2.18}show pumps}{14}{subsection.2.18}%
-\contentsline {subsection}{\numberline {2.19}show warning}{15}{subsection.2.19}%
+\contentsline {subsection}{\numberline {2.12}Метод serve\_customer}{12}{subsection.2.12}%
+\contentsline {subsection}{\numberline {2.13}check\_tanks}{13}{subsection.2.13}%
+\contentsline {subsection}{\numberline {2.14}refill\_tank}{13}{subsection.2.14}%
+\contentsline {subsection}{\numberline {2.15}show\_balance}{13}{subsection.2.15}%
+\contentsline {subsection}{\numberline {2.16}transfer\_fuel}{14}{subsection.2.16}%
+\contentsline {subsection}{\numberline {2.17}manage\_tanks}{14}{subsection.2.17}%
+\contentsline {subsection}{\numberline {2.18}show\_pumps}{14}{subsection.2.18}%
+\contentsline {subsection}{\numberline {2.19}show\_warning}{15}{subsection.2.19}%
 \contentsline {subsection}{\numberline {2.20}run}{15}{subsection.2.20}%
-\contentsline {subsection}{\numberline {2.21}start program}{16}{subsection.2.21}%
+\contentsline {subsection}{\numberline {2.21}start\_program}{16}{subsection.2.21}%
 \contentsline {section}{\numberline {3}Тестирование}{17}{section.3}%
 \contentsline {part}{Заключение}{18}{part.2}%
