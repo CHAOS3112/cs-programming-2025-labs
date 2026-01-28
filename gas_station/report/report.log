@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.14)  28 JAN 2026 22:45
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.14)  29 JAN 2026 01:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1727,13 +1727,7 @@ Overfull \hbox (3.57178pt too wide) in paragraph at lines 180--180
  []
 
 
-Overfull \hbox (174.43715pt too wide) in paragraph at lines 192--194
-[]\TU/TimesNewRoman(0)/m/n/12 Безопасность и ограничения ”min_-level ”max_-leve
-l”и ”can_-supply”. »»»> 5d43ebeb35598aa01ed14934e4c974a4d200f05d 
- []
-
-
-Overfull \hbox (3.57178pt too wide) in paragraph at lines 198--198
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 192--192
 []\TU/Arial(0)/m/n/13 2.2 [] 
  []
 
@@ -1742,104 +1736,104 @@ Overfull \hbox (3.57178pt too wide) in paragraph at lines 198--198
 .sty
 File: lstlang1.sty 2025/10/06 1.11 listings language file
 ) (../code_quoting/importModuls)
-Overfull \hbox (3.57178pt too wide) in paragraph at lines 219--219
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 213--213
 []\TU/Arial(0)/m/n/13 2.3 [] 
  []
 
-(../code_quoting/FuelType) [5
-
-]
-Overfull \hbox (3.57178pt too wide) in paragraph at lines 233--233
+(../code_quoting/FuelType)
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 227--227
 []\TU/Arial(0)/m/n/13 2.4 [] 
  []
 
-(../code_quoting/Tank) [6]
-Overfull \hbox (3.57178pt too wide) in paragraph at lines 255--255
+(../code_quoting/Tank) [5
+
+] [6]
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 249--249
 []\TU/Arial(0)/m/n/13 2.5 [] 
  []
 
 (../code_quoting/Nozzle)
-Overfull \hbox (3.57178pt too wide) in paragraph at lines 273--273
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 267--267
 []\TU/Arial(0)/m/n/13 2.6 [] 
  []
 
 (../code_quoting/Operation) [7]
-Overfull \hbox (3.57178pt too wide) in paragraph at lines 287--287
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 281--281
 []\TU/Arial(0)/m/n/13 2.7 [] 
  []
 
-(../code_quoting/GasStation) [8]
-Overfull \hbox (3.57178pt too wide) in paragraph at lines 307--307
+(../code_quoting/GasStation)
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 301--301
 []\TU/Arial(0)/m/n/13 2.8 [] 
  []
 
-(../code_quoting/Pump)
-Overfull \hbox (3.57178pt too wide) in paragraph at lines 326--326
+(../code_quoting/Pump) [8]
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 320--320
 []\TU/Arial(0)/m/n/13 2.9 [] 
  []
 
 (../code_quoting/init_default_setup) [9]
-Overfull \hbox (4.80176pt too wide) in paragraph at lines 346--346
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 340--340
 []\TU/Arial(0)/m/n/13 2.10 [] 
  []
 
 (../code_quoting/save) [10]
-Overfull \hbox (4.28223pt too wide) in paragraph at lines 365--365
+Overfull \hbox (4.28223pt too wide) in paragraph at lines 359--359
 []\TU/Arial(0)/m/n/13 2.11 [] 
  []
 
 (../code_quoting/log_operation_and_get_disabled_tanks) [11]
-Overfull \hbox (4.80176pt too wide) in paragraph at lines 384--384
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 378--378
 []\TU/Arial(0)/m/n/13 2.12 [] 
  []
 
 (../code_quoting/serve_customer) [12]
-Overfull \hbox (4.80176pt too wide) in paragraph at lines 403--403
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 397--397
 []\TU/Arial(0)/m/n/13 2.13 [] 
  []
 
 (../code_quoting/check_tanks)
-Overfull \hbox (4.80176pt too wide) in paragraph at lines 417--417
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 411--411
 []\TU/Arial(0)/m/n/13 2.14 [] 
  []
 
 (../code_quoting/refill_tank)
-Overfull \hbox (4.80176pt too wide) in paragraph at lines 431--431
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 425--425
 []\TU/Arial(0)/m/n/13 2.15 [] 
  []
 
 (../code_quoting/show_balance) [13]
-Overfull \hbox (4.80176pt too wide) in paragraph at lines 445--445
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 439--439
 []\TU/Arial(0)/m/n/13 2.16 [] 
  []
 
 (../code_quoting/transfer_fuel)
-Overfull \hbox (4.80176pt too wide) in paragraph at lines 463--463
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 457--457
 []\TU/Arial(0)/m/n/13 2.17 [] 
  []
 
 (../code_quoting/manage_tanks)
-Overfull \hbox (4.80176pt too wide) in paragraph at lines 481--481
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 475--475
 []\TU/Arial(0)/m/n/13 2.18 [] 
  []
 
 (../code_quoting/show_pumps) [14]
-Overfull \hbox (4.80176pt too wide) in paragraph at lines 495--495
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 489--489
 []\TU/Arial(0)/m/n/13 2.19 [] 
  []
 
 (../code_quoting/show_warning)
-Overfull \hbox (4.80176pt too wide) in paragraph at lines 509--509
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 503--503
 []\TU/Arial(0)/m/n/13 2.20 [] 
  []
 
 (../code_quoting/run) [15]
-Overfull \hbox (4.80176pt too wide) in paragraph at lines 523--523
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 517--517
 []\TU/Arial(0)/m/n/13 2.21 [] 
  []
 
 (../code_quoting/start_program) [16]
-Overfull \hbox (2.78613pt too wide) in paragraph at lines 537--537
+Overfull \hbox (2.78613pt too wide) in paragraph at lines 531--531
 []\TU/Arial(0)/m/n/14 3 [] 
  []
 
@@ -1848,7 +1842,7 @@ Overfull \hbox (2.78613pt too wide) in paragraph at lines 537--537
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 559.
+(hyperref)                removing `\\' on input line 553.
 
 
 (C:\Users\Machcreator\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\se-ut
@@ -1874,10 +1868,10 @@ Package logreq Info: Writing requests to 'report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37350 strings out of 402987
- 810335 string characters out of 5447281
- 2204904 words of memory out of 5000000
- 65637 multiletter control sequences out of 15000+600000
+ 37338 strings out of 402987
+ 810167 string characters out of 5447281
+ 2204908 words of memory out of 5000000
+ 65625 multiletter control sequences out of 15000+600000
  631201 words of font info for 98 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  122i,13n,121p,11263b,32890s stack positions out of 10000i,1000n,20000p,200000b,200000s

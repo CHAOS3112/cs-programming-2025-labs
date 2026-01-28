@@ -182,15 +182,9 @@
   Основные компоненты:
 \begin{vvsu_itemize}
   \item Это классы, описывающие сущности АЗС и их поведение;
-<<<<<<< HEAD
   \item Основной контроллер <<GasStation>>;
   \item Система сохранения состояния <<gas\_station\_data.json>>;
   \item Безопасность и ограничения <<min\_level>>, <<max\_level>> и <<can\_supply>>.
-=======
-  \item Основной контроллер "GasStation";
-  \item Система сохранения состояния "gas station data.json";
-  \item Безопасность и ограничения "min\_level", "max\_level" и "can\_supply".
->>>>>>> 5d43ebeb35598aa01ed14934e4c974a4d200f05d
 \end{vvsu_itemize}
 
 
@@ -400,7 +394,7 @@
 
   
 % Подглава -check\_tanks
-\subsection{check\_tanks}
+\subsection{Метод check\_tanks}
   Печатает список всех цистерн с текущими уровнями и состоянием.
   На рисунке \ref{fig:../code_quoting/check_tanks} представлен код программы.
 
@@ -414,7 +408,7 @@
 
 
 % Подглава -refill\_tank
-\subsection{refill\_tank}
+\subsection{Методrefill\_tank}
   Позволяет оператору добавить топливо в выбранную цистерну (с проверкой на переполнение). Логирует операцию.
   На рисунке \ref{fig:../code_quoting/refill_tank} представлен код программы.
 
@@ -428,7 +422,7 @@
 
 
 % Подглава -show\_balance
-\subsection{show\_balance}
+\subsection{Метод show\_balance}
   Печатает показатели: число обслуженных машин, общий доход, сколько каждого топлива продано и сколько принесло денег.
   На рисунке \ref{fig:../code_quoting/show_balance} представлен код программы.
 
@@ -442,7 +436,7 @@
 
 
 % Подглава - transfer\_fuel
-\subsection{transfer\_fuel}
+\subsection{Метод transfer\_fuel}
   Позволяет перемещать топливо между цистернами того же типа (например, перенести часть АИ-95 из одной цистерны в другую). Проверяет, что есть место в приёмнике и что источник имеет достаточно топлива.
   На рисунке \ref{fig:../code_quoting/transfer_fuel} представлен код программы.
 
@@ -460,7 +454,7 @@
 
 
 % Подглава - manage\_tanks
-\subsection{manage\_tanks}
+\subsection{Метод manage\_tanks}
   Дает оператору возможность вручную включать/отключать цистерны. При включении проверяется, не ниже ли уровень минимального порога.
   На рисунке \ref{fig:../code_quoting/manage_tanks} представлен код программы.
 
@@ -478,7 +472,7 @@
 
 
 % Подглава -show\_pumps 
-\subsection{show\_pumps}
+\subsection{Метод show\_pumps}
   Печатает для каждой колонки, какие сопла есть и доступны ли они в данный момент.
   На рисунке \ref{fig:../code_quoting/show_pumps} представлен код программы.
 
@@ -492,7 +486,7 @@
 
 
 % Подглава - show\_warning
-\subsection{show\_warning}
+\subsection{Метод show\_warning}
   При запуске меню показывает, если есть отключённые цистерны и почему (низкий уровень или отключили вручную).
   На рисунке \ref{fig:../code_quoting/show_warning} представлен код программы.
 
@@ -506,7 +500,7 @@
 
 
 % Подглава - run
-\subsection{run}
+\subsection{цикл run}
   Загружает данные при старте, отображает меню в цикле, читает выбор пользователя и вызывает соответствующие методы. На выходе сохраняет данные и завершает программу.
   На рисунке \ref{fig:../code_quoting/run} представлен код программы.
 
@@ -519,12 +513,12 @@
   Типичный простой консольный интерфейс, удобный для демонстрации и для использования вручную.
 
 
-% Подглава - start\_program
-\subsection{start\_program}
+% Подглава - Запуск программы
+\subsection{Запуск программы}
   Запускает программу, если файл выполнен напрямую (а не импортирован как модуль).
   На рисунке \ref{fig:../code_quoting/start_program} представлен код программы.
 
-\begin{vvsu_figure}{Листинг программы для метода start program}{fig:../code_quoting/start_program}
+\begin{vvsu_figure}{Листинг программы для метода запуск программы}{fig:../code_quoting/start_program}
   \begin{minipage}{.75\textwidth}
     \lstinputlisting[language=Python,basicstyle=\fontsize{10}{10}\linespread{1}\selectfont\ttfamily]{../code_quoting/start_program}
   \end{minipage}

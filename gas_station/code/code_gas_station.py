@@ -320,7 +320,7 @@ class GasStation:
         print("\n--- Оформить пополнение топлива ---\n")
         print("Доступные цистерны:")
         for i, tank in enumerate(self.tanks, 1):
-            print(f"{i}) {tank.fuel_type} №{tank.tank_id} | {tank.current_volume} / {tank.max_volume} л")
+            print(f"{i}) {tank.fuel_type} №{tank.tank_id} | {tank.current_volume}/ {tank.max_volume} л")
 
         try:
             idx = int(input("\nВыберите цистерну:\n> ")) - 1
@@ -530,7 +530,7 @@ class GasStation:
 
             choice = input("> ").strip()
 
-            if choice == "1":               # Обработка выбора пользователя
+            if choice == "1":               # Обработка выбора
                 self.serve_customer()
             elif choice == "2":
                 self.check_tanks()
