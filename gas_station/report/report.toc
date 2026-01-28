@@ -5,11 +5,11 @@
 \contentsline {subsection}{\numberline {2.1}Артхитектура программы}{5}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Импорт библеотек}{5}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Класс FuelType}{5}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Класс Tank}{5}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.4}Класс Tank}{6}{subsection.2.4}%
 \contentsline {subsection}{\numberline {2.5}Класс Nozzle}{7}{subsection.2.5}%
 \contentsline {subsection}{\numberline {2.6}Класс Operation}{7}{subsection.2.6}%
 \contentsline {subsection}{\numberline {2.7}Класс GasStation}{8}{subsection.2.7}%
-\contentsline {subsection}{\numberline {2.8}Класс Pump}{8}{subsection.2.8}%
+\contentsline {subsection}{\numberline {2.8}Класс Pump}{9}{subsection.2.8}%
 \contentsline {subsection}{\numberline {2.9}Метод init\_default\_setup}{9}{subsection.2.9}%
 \contentsline {subsection}{\numberline {2.10}Сохранение и загрузка состояния}{10}{subsection.2.10}%
 \contentsline {subsection}{\numberline {2.11}Вспомогательные методы}{11}{subsection.2.11}%
