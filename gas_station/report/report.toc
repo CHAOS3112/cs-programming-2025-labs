@@ -25,4 +25,8 @@
 \contentsline {subsection}{\numberline {2.21}run}{15}{subsection.2.21}%
 \contentsline {subsection}{\numberline {2.22}start program}{16}{subsection.2.22}%
 \contentsline {section}{\numberline {3}Тестирование}{17}{section.3}%
+<<<<<<< HEAD
 \contentsline {part}{Заключение}{18}{part.2}%
+=======
+\contentsline {section}{\numberline {4}Заключение}{18}{section.4}%
+>>>>>>> fe533ebcdb5bb8d69fcf9150000130b8618da0f2

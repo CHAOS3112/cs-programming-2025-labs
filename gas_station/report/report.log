@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.14)  28 JAN 2026 18:19
+=======
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.14)  28 JAN 2026 17:31
+>>>>>>> fe533ebcdb5bb8d69fcf9150000130b8618da0f2
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1712,7 +1716,11 @@ tex-text;"
 [3
 
 ]
+<<<<<<< HEAD
 Overfull \hbox (2.78613pt too wide) in paragraph at lines 165--165
+=======
+Overfull \hbox (2.78613pt too wide) in paragraph at lines 161--161
+>>>>>>> fe533ebcdb5bb8d69fcf9150000130b8618da0f2
 []\TU/Arial(0)/m/n/14 1 [] 
  []
 
@@ -1720,17 +1728,29 @@ Overfull \hbox (2.78613pt too wide) in paragraph at lines 165--165
 
 
 ]
+<<<<<<< HEAD
 Overfull \hbox (2.78613pt too wide) in paragraph at lines 177--177
+=======
+Overfull \hbox (2.78613pt too wide) in paragraph at lines 173--173
+>>>>>>> fe533ebcdb5bb8d69fcf9150000130b8618da0f2
 []\TU/Arial(0)/m/n/14 2 [] 
  []
 
 
+<<<<<<< HEAD
 Overfull \hbox (3.57178pt too wide) in paragraph at lines 181--181
+=======
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 177--177
+>>>>>>> fe533ebcdb5bb8d69fcf9150000130b8618da0f2
 []\TU/Arial(0)/m/n/13 2.1 [] 
  []
 
 
+<<<<<<< HEAD
 Overfull \hbox (3.57178pt too wide) in paragraph at lines 193--193
+=======
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 189--189
+>>>>>>> fe533ebcdb5bb8d69fcf9150000130b8618da0f2
 []\TU/Arial(0)/m/n/13 2.2 [] 
  []
 
@@ -1739,118 +1759,217 @@ Overfull \hbox (3.57178pt too wide) in paragraph at lines 193--193
 .sty
 File: lstlang1.sty 2025/10/06 1.11 listings language file
 ) (../code_quoting/importModuls)
+<<<<<<< HEAD
 Overfull \hbox (3.57178pt too wide) in paragraph at lines 214--214
+=======
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 210--210
+>>>>>>> fe533ebcdb5bb8d69fcf9150000130b8618da0f2
 []\TU/Arial(0)/m/n/13 2.3 [] 
  []
 
 (../code_quoting/FuelType)
+<<<<<<< HEAD
 Overfull \hbox (3.57178pt too wide) in paragraph at lines 228--228
+=======
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 224--224
+>>>>>>> fe533ebcdb5bb8d69fcf9150000130b8618da0f2
 []\TU/Arial(0)/m/n/13 2.4 [] 
  []
 
 (../code_quoting/Tank) [5
 
 ] [6]
+<<<<<<< HEAD
 Overfull \hbox (3.57178pt too wide) in paragraph at lines 250--250
+=======
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 246--246
+>>>>>>> fe533ebcdb5bb8d69fcf9150000130b8618da0f2
 []\TU/Arial(0)/m/n/13 2.5 [] 
  []
 
 (../code_quoting/Nozzle)
+<<<<<<< HEAD
 Overfull \hbox (3.57178pt too wide) in paragraph at lines 269--269
+=======
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 265--265
+>>>>>>> fe533ebcdb5bb8d69fcf9150000130b8618da0f2
 []\TU/Arial(0)/m/n/13 2.6 [] 
  []
 
 (../code_quoting/Pump) [7]
+<<<<<<< HEAD
 Overfull \hbox (3.57178pt too wide) in paragraph at lines 288--288
+=======
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 284--284
+>>>>>>> fe533ebcdb5bb8d69fcf9150000130b8618da0f2
 []\TU/Arial(0)/m/n/13 2.7 [] 
  []
 
 (../code_quoting/Operation)
+<<<<<<< HEAD
 Overfull \hbox (3.57178pt too wide) in paragraph at lines 302--302
+=======
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 298--298
+>>>>>>> fe533ebcdb5bb8d69fcf9150000130b8618da0f2
 []\TU/Arial(0)/m/n/13 2.8 [] 
  []
 
 (../code_quoting/GasStation) [8]
+<<<<<<< HEAD
 Overfull \hbox (3.57178pt too wide) in paragraph at lines 322--322
+=======
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 318--318
+>>>>>>> fe533ebcdb5bb8d69fcf9150000130b8618da0f2
 []\TU/Arial(0)/m/n/13 2.9 [] 
  []
 
 (../code_quoting/Pump)
+<<<<<<< HEAD
 Overfull \hbox (4.80176pt too wide) in paragraph at lines 341--341
+=======
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 337--337
+>>>>>>> fe533ebcdb5bb8d69fcf9150000130b8618da0f2
 []\TU/Arial(0)/m/n/13 2.10 [] 
  []
 
 (../code_quoting/init_default_setup) [9]
+<<<<<<< HEAD
 Overfull \hbox (4.28223pt too wide) in paragraph at lines 361--361
+=======
+Overfull \hbox (4.28223pt too wide) in paragraph at lines 357--357
+>>>>>>> fe533ebcdb5bb8d69fcf9150000130b8618da0f2
 []\TU/Arial(0)/m/n/13 2.11 [] 
  []
 
 (../code_quoting/save) [10]
+<<<<<<< HEAD
 Overfull \hbox (4.80176pt too wide) in paragraph at lines 380--380
+=======
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 376--376
+>>>>>>> fe533ebcdb5bb8d69fcf9150000130b8618da0f2
 []\TU/Arial(0)/m/n/13 2.12 [] 
  []
 
 (../code_quoting/log_operation_and_get_disabled_tanks) [11]
+<<<<<<< HEAD
 Overfull \hbox (4.80176pt too wide) in paragraph at lines 399--399
+=======
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 395--395
+>>>>>>> fe533ebcdb5bb8d69fcf9150000130b8618da0f2
 []\TU/Arial(0)/m/n/13 2.13 [] 
  []
 
 (../code_quoting/serve_customer) [12]
+<<<<<<< HEAD
 Overfull \hbox (4.80176pt too wide) in paragraph at lines 418--418
+=======
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 414--414
+>>>>>>> fe533ebcdb5bb8d69fcf9150000130b8618da0f2
 []\TU/Arial(0)/m/n/13 2.14 [] 
  []
 
 (../code_quoting/check_tanks)
+<<<<<<< HEAD
 Overfull \hbox (4.80176pt too wide) in paragraph at lines 432--432
+=======
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 428--428
+>>>>>>> fe533ebcdb5bb8d69fcf9150000130b8618da0f2
 []\TU/Arial(0)/m/n/13 2.15 [] 
  []
 
 (../code_quoting/refill_tank)
+<<<<<<< HEAD
 Overfull \hbox (4.80176pt too wide) in paragraph at lines 446--446
+=======
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 442--442
+>>>>>>> fe533ebcdb5bb8d69fcf9150000130b8618da0f2
 []\TU/Arial(0)/m/n/13 2.16 [] 
  []
 
 (../code_quoting/show_balance) [13]
+<<<<<<< HEAD
 Overfull \hbox (4.80176pt too wide) in paragraph at lines 460--460
+=======
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 456--456
+>>>>>>> fe533ebcdb5bb8d69fcf9150000130b8618da0f2
 []\TU/Arial(0)/m/n/13 2.17 [] 
  []
 
 (../code_quoting/transfer_fuel)
+<<<<<<< HEAD
 Overfull \hbox (4.80176pt too wide) in paragraph at lines 478--478
+=======
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 474--474
+>>>>>>> fe533ebcdb5bb8d69fcf9150000130b8618da0f2
 []\TU/Arial(0)/m/n/13 2.18 [] 
  []
 
 (../code_quoting/manage_tanks)
+<<<<<<< HEAD
 Overfull \hbox (4.80176pt too wide) in paragraph at lines 496--496
+=======
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 492--492
+>>>>>>> fe533ebcdb5bb8d69fcf9150000130b8618da0f2
 []\TU/Arial(0)/m/n/13 2.19 [] 
  []
 
 (../code_quoting/show_pumps) [14]
+<<<<<<< HEAD
 Overfull \hbox (4.80176pt too wide) in paragraph at lines 510--510
 []\TU/Arial(0)/m/n/13 2.20 [] 
  []
 
 (../code_quoting/show_warning)
 Overfull \hbox (4.80176pt too wide) in paragraph at lines 524--524
+=======
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 506--506
+[]\TU/Arial(0)/m/n/13 2.20 [] 
+ []
+
+
+LaTeX Warning: Reference `fig:../code_quoting/emergency_and_exit_emergency' on 
+page 15 undefined on input line 508.
+
+(../code_quoting/show_warning)
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 520--520
+>>>>>>> fe533ebcdb5bb8d69fcf9150000130b8618da0f2
 []\TU/Arial(0)/m/n/13 2.21 [] 
  []
 
 (../code_quoting/run) [15]
+<<<<<<< HEAD
 Overfull \hbox (4.80176pt too wide) in paragraph at lines 538--538
+=======
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 534--534
+>>>>>>> fe533ebcdb5bb8d69fcf9150000130b8618da0f2
 []\TU/Arial(0)/m/n/13 2.22 [] 
  []
 
 (../code_quoting/start_program) [16]
+<<<<<<< HEAD
 Overfull \hbox (2.78613pt too wide) in paragraph at lines 552--552
+=======
+Overfull \hbox (2.78613pt too wide) in paragraph at lines 548--548
+>>>>>>> fe533ebcdb5bb8d69fcf9150000130b8618da0f2
 []\TU/Arial(0)/m/n/14 3 [] 
  []
 
 [17
 
 ]
+<<<<<<< HEAD
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\\' on input line 574.
+=======
+Overfull \hbox (2.78613pt too wide) in paragraph at lines 563--563
+[]\TU/Arial(0)/m/n/14 4 [] 
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\\' on input line 570.
+>>>>>>> fe533ebcdb5bb8d69fcf9150000130b8618da0f2
 
 
 (C:\Users\Machcreator\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\se-ut
@@ -1877,11 +1996,20 @@ Package logreq Info: Writing requests to 'report.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  37356 strings out of 402987
+<<<<<<< HEAD
  810426 string characters out of 5447281
  2204907 words of memory out of 5000000
  65641 multiletter control sequences out of 15000+600000
  631201 words of font info for 98 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  122i,13n,121p,11263b,32890s stack positions out of 10000i,1000n,20000p,200000b,200000s
+=======
+ 810482 string characters out of 5447281
+ 2204909 words of memory out of 5000000
+ 65640 multiletter control sequences out of 15000+600000
+ 631209 words of font info for 99 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 122i,13n,121p,11263b,32826s stack positions out of 10000i,1000n,20000p,200000b,200000s
+>>>>>>> fe533ebcdb5bb8d69fcf9150000130b8618da0f2
 
 Output written on report.pdf (20 pages).
