@@ -164,7 +164,7 @@ class GasStation:
             8: [FuelType.AI95, FuelType.DT]
         }
 
-        # Назначаем цистерн
+        # Назначаем цистерн к пистолетам, привязаных к ним
         for pump_id, fuels in pump_config.items():
             nozzles = []
             for fuel in fuels:

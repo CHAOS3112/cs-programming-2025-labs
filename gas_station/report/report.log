@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.14)  28 JAN 2026 18:25
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.14)  28 JAN 2026 19:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1472,9 +1472,6 @@ Package babel Info: 'russian' activates 'russian' shorthands.
 (babel)             Reported on input line 10.
 
 
-LaTeX Warning: Label `fig:../code_quoting/Pump' multiply defined.
-
-
 LaTeX Warning: Label `sec:execution' multiply defined.
 
 
@@ -1756,92 +1753,87 @@ Overfull \hbox (3.57178pt too wide) in paragraph at lines 249--249
  []
 
 (../code_quoting/Nozzle)
-Overfull \hbox (3.57178pt too wide) in paragraph at lines 268--268
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 267--267
 []\TU/Arial(0)/m/n/13 2.6 [] 
  []
 
-(../code_quoting/Pump) [7]
-Overfull \hbox (3.57178pt too wide) in paragraph at lines 287--287
+(../code_quoting/Operation) [7]
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 281--281
 []\TU/Arial(0)/m/n/13 2.7 [] 
  []
 
-(../code_quoting/Operation)
+(../code_quoting/GasStation)
 Overfull \hbox (3.57178pt too wide) in paragraph at lines 301--301
 []\TU/Arial(0)/m/n/13 2.8 [] 
  []
 
-(../code_quoting/GasStation) [8]
-Overfull \hbox (3.57178pt too wide) in paragraph at lines 321--321
+(../code_quoting/Pump) [8]
+Overfull \hbox (3.57178pt too wide) in paragraph at lines 320--320
 []\TU/Arial(0)/m/n/13 2.9 [] 
  []
 
-(../code_quoting/Pump)
+(../code_quoting/init_default_setup) [9]
 Overfull \hbox (4.80176pt too wide) in paragraph at lines 340--340
 []\TU/Arial(0)/m/n/13 2.10 [] 
  []
 
-(../code_quoting/init_default_setup) [9]
-Overfull \hbox (4.28223pt too wide) in paragraph at lines 360--360
+(../code_quoting/save) [10]
+Overfull \hbox (4.28223pt too wide) in paragraph at lines 359--359
 []\TU/Arial(0)/m/n/13 2.11 [] 
  []
 
-(../code_quoting/save) [10]
-Overfull \hbox (4.80176pt too wide) in paragraph at lines 379--379
+(../code_quoting/log_operation_and_get_disabled_tanks) [11]
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 378--378
 []\TU/Arial(0)/m/n/13 2.12 [] 
  []
 
-(../code_quoting/log_operation_and_get_disabled_tanks) [11]
-Overfull \hbox (4.80176pt too wide) in paragraph at lines 398--398
+(../code_quoting/serve_customer) [12]
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 397--397
 []\TU/Arial(0)/m/n/13 2.13 [] 
  []
 
-(../code_quoting/serve_customer) [12]
-Overfull \hbox (4.80176pt too wide) in paragraph at lines 417--417
+(../code_quoting/check_tanks)
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 411--411
 []\TU/Arial(0)/m/n/13 2.14 [] 
  []
 
-(../code_quoting/check_tanks)
-Overfull \hbox (4.80176pt too wide) in paragraph at lines 431--431
+(../code_quoting/refill_tank)
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 425--425
 []\TU/Arial(0)/m/n/13 2.15 [] 
  []
 
-(../code_quoting/refill_tank)
-Overfull \hbox (4.80176pt too wide) in paragraph at lines 445--445
+(../code_quoting/show_balance) [13]
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 439--439
 []\TU/Arial(0)/m/n/13 2.16 [] 
  []
 
-(../code_quoting/show_balance) [13]
-Overfull \hbox (4.80176pt too wide) in paragraph at lines 459--459
+(../code_quoting/transfer_fuel)
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 457--457
 []\TU/Arial(0)/m/n/13 2.17 [] 
  []
 
-(../code_quoting/transfer_fuel)
-Overfull \hbox (4.80176pt too wide) in paragraph at lines 477--477
+(../code_quoting/manage_tanks)
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 475--475
 []\TU/Arial(0)/m/n/13 2.18 [] 
  []
 
-(../code_quoting/manage_tanks)
-Overfull \hbox (4.80176pt too wide) in paragraph at lines 495--495
+(../code_quoting/show_pumps) [14]
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 489--489
 []\TU/Arial(0)/m/n/13 2.19 [] 
  []
 
-(../code_quoting/show_pumps) [14]
-Overfull \hbox (4.80176pt too wide) in paragraph at lines 509--509
+(../code_quoting/show_warning)
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 503--503
 []\TU/Arial(0)/m/n/13 2.20 [] 
  []
 
-(../code_quoting/show_warning)
-Overfull \hbox (4.80176pt too wide) in paragraph at lines 523--523
+(../code_quoting/run) [15]
+Overfull \hbox (4.80176pt too wide) in paragraph at lines 517--517
 []\TU/Arial(0)/m/n/13 2.21 [] 
  []
 
-(../code_quoting/run) [15]
-Overfull \hbox (4.80176pt too wide) in paragraph at lines 537--537
-[]\TU/Arial(0)/m/n/13 2.22 [] 
- []
-
 (../code_quoting/start_program) [16]
-Overfull \hbox (2.78613pt too wide) in paragraph at lines 551--551
+Overfull \hbox (2.78613pt too wide) in paragraph at lines 531--531
 []\TU/Arial(0)/m/n/14 3 [] 
  []
 
@@ -1850,7 +1842,7 @@ Overfull \hbox (2.78613pt too wide) in paragraph at lines 551--551
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 573.
+(hyperref)                removing `\\' on input line 553.
 
 
 (C:\Users\Machcreator\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\se-ut
@@ -1876,10 +1868,10 @@ Package logreq Info: Writing requests to 'report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37356 strings out of 402987
- 810426 string characters out of 5447281
- 2204907 words of memory out of 5000000
- 65641 multiletter control sequences out of 15000+600000
+ 37353 strings out of 402987
+ 810380 string characters out of 5447281
+ 2204905 words of memory out of 5000000
+ 65640 multiletter control sequences out of 15000+600000
  631201 words of font info for 98 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  122i,13n,121p,11263b,32890s stack positions out of 10000i,1000n,20000p,200000b,200000s

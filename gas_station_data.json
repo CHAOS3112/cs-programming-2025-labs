@@ -1,0 +1,73 @@
+{
+  "tanks": [
+    {
+      "fuel_type": "АИ-92",
+      "tank_id": 1,
+      "max_volume": 20000,
+      "current_volume": 20000,
+      "min_level": 2000,
+      "enabled": true
+    },
+    {
+      "fuel_type": "АИ-95",
+      "tank_id": 1,
+      "max_volume": 20000,
+      "current_volume": 20000,
+      "min_level": 2000,
+      "enabled": true
+    },
+    {
+      "fuel_type": "АИ-95",
+      "tank_id": 2,
+      "max_volume": 20000,
+      "current_volume": 19950,
+      "min_level": 2000,
+      "enabled": true
+    },
+    {
+      "fuel_type": "АИ-98",
+      "tank_id": 1,
+      "max_volume": 15000,
+      "current_volume": 15000,
+      "min_level": 2000,
+      "enabled": true
+    },
+    {
+      "fuel_type": "ДТ",
+      "tank_id": 1,
+      "max_volume": 25000,
+      "current_volume": 25000,
+      "min_level": 2000,
+      "enabled": false
+    }
+  ],
+  "operations": [
+    {
+      "op_type": "Продажа",
+      "details": "50 л АИ-95 на колонке 8, сумма: 2915.00 ₽",
+      "timestamp": "2026-01-28 18:36:36"
+    },
+    {
+      "op_type": "Отключение",
+      "details": "Цистерна ДТ №1",
+      "timestamp": "2026-01-28 18:37:16"
+    }
+  ],
+  "stats": {
+    "total_income": 2915.0,
+    "cars_served": 1,
+    "fuel_sold": {
+      "АИ-92": 0,
+      "АИ-95": 50,
+      "АИ-98": 0,
+      "ДТ": 0
+    },
+    "fuel_income": {
+      "АИ-92": 0.0,
+      "АИ-95": 2915.0,
+      "АИ-98": 0.0,
+      "ДТ": 0.0
+    }
+  },
+  "emergency_mode": false
+}
