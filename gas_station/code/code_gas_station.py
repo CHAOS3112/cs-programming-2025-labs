@@ -8,14 +8,14 @@ from typing import List, Dict, Optional
 # Классы данных
 
 
-class FuelType:
+class FuelType: #типы топлива
     AI92 = "АИ-92"
     AI95 = "АИ-95"
     AI98 = "АИ-98"
     DT = "ДТ"
 
 
-class Tank:
+class Tank: #цистерна
     def __init__(self, fuel_type: str, tank_id: int, max_volume: int, min_level: int = 2000):
         self.fuel_type = fuel_type
         self.tank_id = tank_id
@@ -31,7 +31,7 @@ class Tank:
         if self.is_low():
             self.enabled = False
 
-    def can_supply(self, liters: int) -> bool:
+    def can_supply(self, liters: int)-> bool:
         return self.enabled and self.current_volume >= liters
 
     def withdraw(self, liters: int):
@@ -46,7 +46,7 @@ class Tank:
             raise ValueError("Превышение максимального объема")
         self.current_volume += liters
 
-    def to_dict(self):
+    def to_dict(self):  #Преобразует объект цистерны в словарь для сохранения в JSON
         return {
             "fuel_type": self.fuel_type,
             "tank_id": self.tank_id,
@@ -56,20 +56,20 @@ class Tank:
             "enabled": self.enabled
         }
 
-    @classmethod
+    @classmethod #принимает весь класс
     def from_dict(cls, data):
         tank = cls(data["fuel_type"], data["tank_id"], data["max_volume"], data["min_level"])
         tank.current_volume = data["current_volume"]
         tank.enabled = data["enabled"]
         return tank
 
-    def __str__(self):
+    def __str__(self): #строковое представление объекта цистерны
         status = "ВКЛ" if self.enabled else "ВЫКЛ"
         extra = f" (ниже порога)" if not self.enabled and self.is_low() else ""
         return f"{self.fuel_type} №{self.tank_id} | {self.current_volume} / {self.max_volume} л | {status}{extra}"
 
 
-class Nozzle:
+class Nozzle: #сопло/ пистолет колонки
     def __init__(self, fuel_type: str, tank: Tank):
         self.fuel_type = fuel_type
         self.tank = tank
@@ -81,7 +81,7 @@ class Nozzle:
         return f"{self.fuel_type} №{self.tank.tank_id}"
 
 
-class Pump:
+class Pump: #колонка
     def __init__(self, pump_id: int, nozzles: List[Nozzle]):
         self.pump_id = pump_id
         self.nozzles = nozzles
@@ -97,20 +97,20 @@ class Pump:
         return f"Колонка {self.pump_id}: {fuels}"
 
 
-class Operation:
+class Operation: #Класс для хранения истории операций
     def __init__(self, op_type: str, details: str, timestamp: str = None):
         self.op_type = op_type
         self.details = details
         self.timestamp = timestamp or datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-    def to_dict(self):
+    def to_dict(self): 
         return {"op_type": self.op_type, "details": self.details, "timestamp": self.timestamp}
 
     @classmethod
-    def from_dict(cls, data):
+    def from_dict(cls, data): 
         return cls(data["op_type"], data["details"], data["timestamp"])
 
-    def __str__(self):
+    def __str__(self): #Форматированная строка для вывода операции в истории
         return f"[{self.timestamp}] {self.op_type}: {self.details}"
 
 
@@ -125,20 +125,21 @@ class GasStation:
         FuelType.DT: 54.80
     }
 
-    def __init__(self):
+    def __init__(self): # Списки объектов: цистерны, колонки, история операций
         self.tanks: List[Tank] = []
         self.pumps: List[Pump] = []
         self.operations: List[Operation] = []
-        self.stats = {
+        # Статистика продаж и доходов
+        self.stats = { 
             "total_income": 0.0,
             "cars_served": 0,
             "fuel_sold": {ft: 0 for ft in [FuelType.AI92, FuelType.AI95, FuelType.AI98, FuelType.DT]},
             "fuel_income": {ft: 0.0 for ft in [FuelType.AI92, FuelType.AI95, FuelType.AI98, FuelType.DT]}
         }
-        self.emergency_mode = False
-        self._init_default_setup()
+        self.emergency_mode = False # флаг аварийного режима
+        self._init_default_setup()  # инициализация стандартной конфигурации АЗС
 
-    def _init_default_setup(self):
+    def _init_default_setup(self): # Инициализация стандартной конфигурации АЗС цистерн и колонок
         # цистерны
         self.tanks = [
             Tank(FuelType.AI92, 1, 20000),
@@ -176,23 +177,23 @@ class GasStation:
                 nozzles.append(Nozzle(fuel, tank))
             self.pumps.append(Pump(pump_id, nozzles))
 
-    def save_to_files(self):
+    def save_to_files(self): # Сохраняет текущее состояние АЗС в файл gas_station_data.json
         data = {
             "tanks": [t.to_dict() for t in self.tanks],
             "operations": [op.to_dict() for op in self.operations],
             "stats": self.stats,
             "emergency_mode": self.emergency_mode
         }
-        with open("gas_station_data.json", "w", encoding="utf-8") as f:
-            json.dump(data, f, ensure_ascii=False, indent=2)
+        with open("gas_station_data.json", "w", encoding="utf-8") as f: # открытие файла для записи
+            json.dump(data, f, ensure_ascii=False, indent=2) 
 
-    def load_from_files(self):
+    def load_from_files(self):  # Восстановить/ Загрузить АЗС из файла
         if not os.path.exists("gas_station_data.json"):
             return
         try:
             with open("gas_station_data.json", "r", encoding="utf-8") as f:
                 data = json.load(f)
-            self.tanks = [Tank.from_dict(t) for t in data["tanks"]]
+            self.tanks = [Tank.from_dict(t) for t in data["tanks"]]       # Восстанавливаем цистерны и операции
             self.operations = [Operation.from_dict(op) for op in data["operations"]]
             self.stats = data["stats"]
             self.emergency_mode = data.get("emergency_mode", False)
@@ -229,10 +230,10 @@ class GasStation:
         if len(self.operations) > 100:  # лимит истории 100 записей
             self.operations.pop(0)
 
-    def get_disabled_tanks(self) -> List[Tank]:
+    def get_disabled_tanks(self) -> List[Tank]:         # Получить список отключённых цистерн
         return [t for t in self.tanks if not t.enabled]
 
-    def serve_customer(self):
+    def serve_customer(self):             # Обслуживание клиента: выбор колонки, топлива, расчёт и выдача
         if self.emergency_mode:
             print("АЗС заблокирована из-за аварийной ситуации!")
             input("Нажмите Enter для возврата в меню...")
@@ -290,8 +291,8 @@ class GasStation:
                 input("Нажмите Enter для возврата в меню...")
                 return
 
-            try:
-                nozzle.tank.withdraw(int(liters))
+            try:    #Выполняем выдачу топлива и обновляем статистику
+                nozzle.tank.withdraw(int(liters))        # списываем топливо
                 self.stats["cars_served"] += 1
                 self.stats["fuel_sold"][nozzle.fuel_type] += int(liters)
                 self.stats["fuel_income"][nozzle.fuel_type] += total
@@ -354,7 +355,7 @@ class GasStation:
         if not self.operations:
             print("История пуста.")
         else:
-            for op in reversed(self.operations[-20:]):  # последние 20 операций
+            for op in reversed(self.operations[-20:]):  # последние 20, в обратном порядке (новые сверху)
                 print(op)
         input("\nНажмите Enter для возврата в меню...")
 
@@ -364,7 +365,7 @@ class GasStation:
             input("Нажмите Enter для возврата в меню...")
             return
 
-        print("\n--- Перекачка топлива между цистернами ---\n")
+        print("\n--- Перекачка топлива между цистернами ---\n")       # Источник: только включённые цистерны
         print("Источник:")
         sources = [t for t in self.tanks if t.enabled]
         if not sources:
@@ -381,7 +382,7 @@ class GasStation:
             source = sources[src_idx]
 
             print("\nПриемник (только тот же тип топлива):")
-            targets = [t for t in self.tanks if t.fuel_type == source.fuel_type and t != source]
+            targets = [t for t in self.tanks if t.fuel_type == source.fuel_type and t != source]      # Приёмник: только цистерны того же типа, но не сам источник
             if not targets:
                 print("Нет подходящих цистерн для приема.")
                 input("Нажмите Enter для возврата в меню...")
@@ -400,7 +401,7 @@ class GasStation:
             if liters > (target.max_volume - target.current_volume):
                 raise ValueError("Недостаточно места в приемнике")
 
-            source.withdraw(liters)
+            source.withdraw(liters)        # Выполняем перекачку
             target.refill(liters)
             self.log_operation("Перекачка", f"{liters} л {source.fuel_type} из №{source.tank_id} в №{target.tank_id}")
             print("Перекачка успешно выполнена.")
@@ -408,7 +409,7 @@ class GasStation:
             print(f"Ошибка: {e}")
         input("\nНажмите Enter для возврата в меню...")
 
-    def manage_tanks(self):
+    def manage_tanks(self):           #Ручное включение/отключение цистерн
         if self.emergency_mode:
             print("Управление цистернами недоступно в аварийном режиме!")
             input("Нажмите Enter для возврата в меню...")
@@ -457,7 +458,7 @@ class GasStation:
             print(f"Ошибка: {e}")
         input("\nНажмите Enter для возврата в меню...")
 
-    def show_pumps(self):
+    def show_pumps(self):             #Показывает состояние всех колонок и их пистолетов
         print("\n--- Состояние колонок ---\n")
         for pump in self.pumps:
             print(f"Колонка {pump.pump_id}:")
@@ -466,7 +467,7 @@ class GasStation:
                 print(f"  - {nozzle.fuel_type} (цистерна {nozzle.get_tank_info()}) → {status}")
         input("\nНажмите Enter для возврата в меню...")
 
-    def emergency(self):
+    def emergency(self):              #Активирует аварийный режим: отключает все цистерны
         if self.emergency_mode:
             print("\nАЗС уже в аварийном режиме!")
         else:
@@ -498,7 +499,7 @@ class GasStation:
                 print(f" - {t.fuel_type} №{t.tank_id} ({reason})")
             print()
 
-    def run(self):
+    def run(self):            #Основной цикл программы- главное меню АЗС
         self.load_from_files()
         while True:
             os.system('cls' if os.name == 'nt' else 'clear')
@@ -529,7 +530,7 @@ class GasStation:
 
             choice = input("> ").strip()
 
-            if choice == "1":
+            if choice == "1":               # Обработка выбора пользователя
                 self.serve_customer()
             elif choice == "2":
                 self.check_tanks()
